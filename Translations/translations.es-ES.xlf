@@ -1,0 +1,2217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="es" original="MODULO RETENCIONES IRPF INDRA">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 2627790532 - Field 3684440170 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal Template Name</source>
+          <target>Nombre libro diario</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Aux. liq mov. retención - Field Journal Template Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2627790532 - Field 2704330142 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal Batch Name</source>
+          <target>Nombre sección diario</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Aux. liq mov. retención - Field Journal Batch Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2627790532 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <target>Nº línea</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Aux. liq mov. retención - Field Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2627790532 - Field 932738519 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mov.retención</source>
+          <target>Mov.retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Aux. liq mov. retención - Field Mov.retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2627790532 - Field 1727160290 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Importe a liquidar</source>
+          <target>Importe a liquidar</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Aux. liq mov. retención - Field Importe a liquidar - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2627790532 - Field 923807272 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document No.</source>
+          <target>Nº Documento</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Aux. liq mov. retención - Field Nº documento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2627790532 - Field 2195077607 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User Id.</source>
+          <target>Id.usuario</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Aux. liq mov. retención - Field Id.usuario - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4237502890 - Field 743017303 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <target>Código</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Perception Keys (IRPF) - Field Código - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4237502890 - Field 2615446671 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target>Descripción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Perception Keys (IRPF) - Field Descripción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4237502890 - Field 1983806982 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>% Deduction</source>
+          <target>% Retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Perception Keys (IRPF) - Field % Retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4237502890 - Field 2464261513 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Deduction Acc</source>
+          <target>Cta. retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Perception Keys (IRPF) - Field Cta. retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4237502890 - Field 3048735536 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cash,Species,Entry into account impact</source>
+          <target>Dineraria,Especie,Ingreso a cuenta repercutido</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Perception Keys (IRPF) - Field Tipo percepción - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 4237502890 - Field 3048735536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Perception Type</source>
+          <target>Tipo percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Perception Keys (IRPF) - Field Tipo percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4237502890 - Field 4125547475 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Base,Base+VAT</source>
+          <target>Base,Base+IVA</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Perception Keys (IRPF) - Field Tipo cálculo - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 4237502890 - Field 4125547475 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculation Type</source>
+          <target>Tipo cálculo</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Perception Keys (IRPF) - Field Tipo cálculo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4237502890 - Field 3195678676 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source> ,A,B,C,D,E,F,G,H,I,J,K,L,19</source>
+          <target> ,A,B,C,D,E,F,G,H,I,J,K,L,19</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Perception Keys (IRPF) - Field Clave IRPF - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 4237502890 - Field 3195678676 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IRPF Key</source>
+          <target>Clave IRPF</target> 
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Perception Keys (IRPF) - Field Clave IRPF - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4237502890 - Field 1005280448 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source> ,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16</source>
+          <target> ,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Perception Keys (IRPF) - Field Subclave IRPF - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 4237502890 - Field 1005280448 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IRPF SubKey</source>
+          <target>Subclave</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Perception Keys (IRPF) - Field Subclave IRPF - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4237502890 - Field 2807811550 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer,Vendor</source>
+          <target>Cliente,Proveedor</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Perception Keys (IRPF) - Field Cli/Prov - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 4237502890 - Field 2807811550 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cust/Vend</source>
+          <target>Cli/Prov'</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Perception Keys (IRPF) - Field Cli/Prov - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4237502890 - Field 4260085839 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Rent,Guaranty,Professional,Others</source>
+          <target>Alquiler,Garantía,Profesionales,Otros</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Perception Keys (IRPF) - Field Tipo Retención - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 4237502890 - Field 4260085839 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Deduction Type</source>
+          <target>Tipo Retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Perception Keys (IRPF) - Field Tipo Retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4237502890 - Field 2639512646 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IRPF Series No.</source>
+          <target>Nº serie IRPF</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Perception Keys (IRPF) - Field No. serie IRPF - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3560891574 - Field 743017303 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <target>Código</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Perception Type (IRPF) - Field Código - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3560891574 - Field 2615446671 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target>Descripción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Perception Type (IRPF) - Field Descripción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Witholding Tax registers</source>
+          <target>Mov. Retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 2527277450 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <target>Nº mov.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Nº mov. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 97316691 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor No. / Customer no.</source>
+          <target>Nº Proveedor/Cliente</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Nº Proveedor / Nº Cliente - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 2615446671 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target>Descripción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Descripción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 3604953670 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>VAT Registration No.</source>
+          <target>Cif/Nif</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Cif/Nif - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 2167774449 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document emission date</source>
+          <target>Fecha emisión documento</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Fecha emisión documento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 1313857310 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source> Posting Date</source>
+          <target>Fecha registro</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Fecha registro - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 923807272 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document No.</source>
+          <target>Nº documento'</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Nº documento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 3572731794 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice Amount Including VAT</source>
+          <target>Importe factura iva incl.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Importe factura iva incl. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 3623060038 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Deduction BASE</source>
+          <target>Base retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Base retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 1249035046 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Deduction %</source>
+          <target>% retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field % retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 3446894037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Receiving Type</source>
+          <target>Tipo de Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Tipo de Perceptor - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 2399934534 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Perceptions Key</source>
+          <target>Clave de Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Clave de Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 961998961 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Deduction Amount</source>
+          <target>Importe retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Importe retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 2464261513 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Deduction Acc.</source>
+          <target>Cta. retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Cta. retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 3325613362 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Deduction Amount (LCY)</source>
+          <target>Importe retención (DL)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Importe retención (DL) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 2711032071 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Postal Code</source>
+          <target>C.P</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field C.P - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 1928606605 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date export</source>
+          <target>Fecha exportación</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Fecha exportación - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 800218810 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Exported</source>
+          <target>Exportado</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Exportado - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 222806385 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <target>Nº asiento</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Nº asiento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 1241237416 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File No.</source>
+          <target>Nº archivo</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Nº archivo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 3398113086 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Origin Cod</source>
+          <target>Cód. origen</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Cód. origen - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 3004056449 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Deduction Base (LCY)</source>
+          <target>Base retencion (DL)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Base retencion (DL) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 1227032006 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Currency Code</source>
+          <target>Cód. divisa</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Cód. divisa - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 2891282593 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice amount</source>
+          <target>Importe Factura (DL)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Importe Factura (DL) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 2599902548 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Name 1</source>
+          <target>Nombre 1</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Nombre 1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 466061659 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Name 2/surname</source>
+          <target>Nombre 2/Apellidos</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Nombre 2/Apellidos - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 4020453246 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>County Code</source>
+          <target>Código provincia</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Código provincia - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 2270576013 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Acrued Year</source>
+          <target>Año devengo</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Año devengo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 3195678676 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IRPF Key</source>
+          <target>Clave IRPF</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Clave IRPF - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 3195678676 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>,A,B,C,D,E,F,G,H,I,J,K,L,,,,,,19</source>
+          <target>,A,B,C,D,E,F,G,H,I,J,K,L,,,,,,19</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Clave IRPF - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 1005280448 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IRPF Subkey</source>
+          <target>Subclave IRPF</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Subclave IRPF - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 1005280448 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16</source>
+          <target> ,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Subclave IRPF - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 3048735536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Perception Type</source>
+          <target>Tipo percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Tipo percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 3048735536 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cash,Species,Joined account impacted</source>
+          <target>Dineraria,Especie,Ingreso a cuenta repercutido</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Tipo percepción - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 1723447047 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Job No</source>
+          <target>Nº Proyecto</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Nº Proyecto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 1438140528 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Job Description</source>
+          <target>Descripción Proyecto</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Descripción Proyecto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 1654878624 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Outstanding</source>
+          <target>Pendiente</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Pendiente - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 3276012120 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Outstanding Amount</source>
+          <target>Importe Pendiente</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Importe Pendiente - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 646297710 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Liquidated By entry</source>
+          <target>Liquidado por Movimiento</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Liquidado por Movimiento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 2807811550 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cust/Vend</source>
+          <target>Cli/Prov</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Cli/Prov - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 2807811550 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer,Vendor</source>
+          <target>Cliente,Proveedor</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Cli/Prov - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 4260085839 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Deduction Type</source>
+          <target>Tipo Retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Tipo Retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 4260085839 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Rent,Guaranty,Professionals,Others</source>
+          <target>Alquiler,Garantía,Profesionales,Otros</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Tipo Retención - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 3447234562 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount to liquidate</source>
+          <target>Importe a Liquidar</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Importe a Liquidar - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 2124635418 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice Amount</source>
+          <target>Importe factura</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Importe factura - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 2673164076 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reversed</source>
+          <target>Revertido</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Revertido - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 563954635 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reversed by Entry No</source>
+          <target>Revertido por el movimiento nº</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Revertido por el movimiento nº - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 23149007 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reversed by Entry No</source>
+          <target>Revertido por el movimiento nº</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Nº movimiento revertido - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 2832857678 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Type</source>
+          <target>Tipo documento</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Tipo Documento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 2832857678 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source> ,Payment,Invoice,Credit Memo,Finance Charge Memo,Reminder,Refund</source>
+          <target>,Pago,Factura,Abono,Docs. interés,Recordatorio,Reembolso</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Tipo Documento - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 773798855 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Desde Nº Mov. contabilidad</source>
+          <target>Desde Nº Mov. contabilidad</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Desde Nº Mov. contabilidad - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 1792473955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Hasta Nº Mov. contabilidad</source>
+          <target>Hasta Nº Mov. contabilidad</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Hasta Nº Mov. contabilidad - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 2212565551 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Outstanding Amount (LCY)</source>
+          <target>Importe Pendiente (DL)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Importe Pendiente (DL) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 3572817017 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount to liquidate (LCY)</source>
+          <target>Amount to liquidate (LCY)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Importe a Liquidar (DL) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 3066116985 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>País</source>
+          <target>País</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field País - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 1577567912 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shortcut Dimension 1 Code</source>
+          <target>Cód. dim. acceso dir. 1</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Shortcut Dimension 1 Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 1003760969 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shortcut Dimension 2 Code</source>
+          <target>Cód. dim. acceso dir. 2</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Shortcut Dimension 2 Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 781257514 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shortcut Dimension 3 Code</source>
+          <target>Cód. dim. acceso dir. 3</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Shortcut Dimension 3 Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 2711388939 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shortcut Dimension 4 Code</source>
+          <target>Cód. dim. acceso dir. 4</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Shortcut Dimension 4 Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 2649381999 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Report Sorting 1</source>
+          <target>Ordenación Informes 1</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Report Sorting 1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 267504554 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Report Sorting 2</source>
+          <target>Ordenación Informes 2</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Report Sorting 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 3924775233 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Report Sorting 3</source>
+          <target>Ordenación Informes 3</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Report Sorting 3 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 2257076082 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice</source>
+          <target>Factura</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Factura - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 2257076082 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>With invoice, No invoice</source>
+          <target>Con factura,Sin factura</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Factura - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 1923993130 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill</source>
+          <target>Efecto</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Efecto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 1906744160 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type Liquidation</source>
+          <target>Tipo Liquidación</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Tipo Liquidacion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Field 1906744160 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer/Vendor,Bank,Account</source>
+          <target>Cliente/Proveedor,Banco,Cuenta</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Field Tipo Liquidacion - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El importe a liquidar no puede ser superior al importe pendiente</source>
+          <target>El importe a liquidar no puede ser superior al importe pendiente</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Method 3254556254 - NamedType 286412435" size-unit="char" translate="yes" xml:space="preserve">
+          <source>¿ Confirma que desea liquidar el mov. retención %1 ?</source>
+          <target>¿ Confirma que desea liquidar el mov. retención %1 ?</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Method LiquidarAbono - NamedType Text001Local</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Method 3254556254 - NamedType 190651254" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Proceso cancelado.</source>
+          <target>Proceso cancelado.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Method LiquidarAbono - NamedType Text002Local</note>
+        </trans-unit>
+        <trans-unit id="Table 3362098955 - Method 3254556254 - NamedType 4256831381" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El importe de los  mov. seleccionados es %1 y no se pueden superar los %2 del mov. %3</source>
+          <target>El importe de los  mov. seleccionados es %1 y no se pueden superar los %2 del mov. %3</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IND Witholding Tax registers - Method LiquidarAbono - NamedType Text003Local</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2958323846 - Method 561213532 - NamedType 2909337707" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El/la %1 no tiene generada la l¡nea de retención.</source>
+          <target>El/la %1 no tiene generada la l¡nea de retención.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit IND Eventos compras - Method CompruebaLinRet - NamedType LocalText001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2958323846 - Method 561213532 - NamedType 527460262" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El proceso se ha interrumpido.</source>
+          <target>El proceso se ha interrumpido.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit IND Eventos compras - Method CompruebaLinRet - NamedType LocalText002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2958323846 - Method 561213532 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>¿Confirma que desea registrar el/la %1?</source>
+          <target>¿Confirma que desea registrar el/la %1?</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit IND Eventos compras - Method CompruebaLinRet - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Witholding Journal</source>
+          <target>Diario retenciones</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 874212758 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Batch Name</source>
+          <target>Nombre sección</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control CurrentJnlBatchName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 874212758 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the journal batch.</source>
+          <target>Especifica el nombre de la sección de diario.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control CurrentJnlBatchName - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 3710982960 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies when the journal line will be posted. </source>
+          <target>Especifica cuándo se va a registrar la línea del diario.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Posting Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 3319631365 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the transaction number for the journal line being processed.</source>
+          <target>Especifica el número de transacción de la línea del diario que se está procesando.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Transaction No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 580412389 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the date when the document represented by the journal line was created.</source>
+          <target>Especifica la fecha en la que se creó el documento representado mediante la línea del diario.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Document Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 2363328873 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the type of document in question.</source>
+          <target>Especifica el tipo de documento en cuestión.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Document Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 486908828 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the document in a posted bill group/payment order, from which this document was generated.</source>
+          <target>Especifica el número del documento de una remesa o una orden de pago registradas con el que se generó este documento.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Document No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 3745161256 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a number for this bill generated from the journal.</source>
+          <target>Especifica un número para este efecto que se crea desde el diario.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Bill No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 3855271124 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how payment for the document must be submitted, such as bank transfer or check.</source>
+          <target>Especifica cómo debe enviarse el pago para el documento, por ejemplo, un cheque o una transferencia bancaria.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Payment Method Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 4085727052 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the due date of this document in a posted bill group/payment order.</source>
+          <target>Especifica la fecha de vencimiento de este documento en una remesa o una orden de pago registradas.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Due Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 1527563463 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a document number that refers to the customer's or vendor's numbering system.</source>
+          <target>Especifica un número de documento que hace referencia al sistema de numeración del cliente o proveedor.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control External Document No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 3699788827 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the account type, such as Customer.</source>
+          <target>Especifica el tipo de cuenta, como Cliente.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Account Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 1622979514 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the account number of the customer/vendor.</source>
+          <target>Especifica el número de cuenta del cliente o del proveedor.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Account No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a description of the record.</source>
+          <target>Especifica una descripción del registro.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 1577567912 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the code for Shortcut Dimension 1, which is one of two global dimension codes that you set up in the General Ledger Setup window.</source>
+          <target>Especifica el código de dimensión del acceso directo 1, que es uno de los dos códigos de dimensión globales que se configuran en la ventana Configuración de contabilidad.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Shortcut Dimension 1 Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 1003760969 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the code for Shortcut Dimension 2, which is one of two global dimension codes that you set up in the General Ledger Setup window.</source>
+          <target>Especifica el código de dimensión del acceso directo 2, que es uno de los dos códigos de dimensión globales que se configuran en la ventana Configuración de contabilidad.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Shortcut Dimension 2 Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 3225159479 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a code for the business unit, in case the company is part of a group.</source>
+          <target>Especifica un código para la unidad de negocio, en caso de que la empresa forme parte de un grupo.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Business Unit Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 3883264070 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the code for the salesperson or purchaser who is linked to the sale or purchase on the journal line.</source>
+          <target>Especifica el código del vendedor o el comprador vinculado a la venta o la compra en la línea del diario.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Salespers./Purch. Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 4198939294 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the code of the currency for the amounts on the journal line.</source>
+          <target>Especifica el código de la divisa de los importes que constan en la línea del diario.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Currency Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 2324056710 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the relationship between the additional reporting currency and the local currency. Amounts are recorded in both LCY and the additional reporting currency, using the relevant exchange rate and the currency factor.</source>
+          <target>Especifica la relación entre la divisa adicional de informe y la divisa local. Los importes se registran tanto en la divisa local como en la divisa adicional de informe, mediante el tipo de cambio y el factor de divisa correspondientes.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Currency Factor - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 59113118 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the typical posting type for the historical general ledger account.</source>
+          <target>Especifica el tipo de registro típico para la cuenta histórica de contabilidad.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Gen. Posting Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 633819257 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the vendor's or customer's trade type to link transactions made for this business partner with the appropriate general ledger account according to the general posting setup.</source>
+          <target>Especifica el tipo de comercio del cliente o el proveedor para vincular las transacciones realizadas para este socio comercial con la cuenta de contabilidad general correspondiente según la configuración de registro general.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Gen. Bus. Posting Group - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 2139693550 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the item's product type to link transactions made for this item with the appropriate general ledger account according to the general posting setup.</source>
+          <target>Especifica el tipo de producto del artículo para vincular las transacciones realizadas para este artículo con la cuenta de contabilidad general correspondiente según la configuración de registro general.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Gen. Prod. Posting Group - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 2796346326 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the total amount (including VAT) that the journal line consists of, if it is a debit amount.</source>
+          <target>Especifica el importe total (IVA incluido) de la línea del diario, si es un importe del debe.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Debit Amount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 2556136339 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the total amount (including VAT) that the journal line consists of, if it is a credit amount.</source>
+          <target>Especifica el importe total (IVA incluido) de la línea del diario, si es un importe del haber.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Credit Amount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 636392376 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the total on the journal line.</source>
+          <target>Especifica el total de la línea del diario.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Amount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 592951229 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the total amount on the journal line in LCY.</source>
+          <target>Especifica el importe total de la línea del diario en la divisa local.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Amount (LCY) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 824028820 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the code for the balancing account type that should be used in this journal line.</source>
+          <target></target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Bal. Account Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 1891586249 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the general ledger, customer, vendor, or bank account to which a balancing entry for the journal line will posted.</source>
+          <target>Especifica el código del tipo de cuenta de contrapartida que se debe utilizar en esta línea del diario.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Bal. Account No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 2253402221 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the general posting type that will be used when you post the entry on the journal line.</source>
+          <target>Especifica el número de la cuenta de contabilidad, cliente, proveedor o banco en la que se registrará un movimiento de contrapartida para la línea del diario.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Bal. Gen. Posting Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 1343517546 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the code of the general business posting group that will be used when you post the entry on the journal line.</source>
+          <target>Especifica el código del grupo contable de negocio general que se utilizará cuando se registre el movimiento en la línea del diario.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Bal. Gen. Bus. Posting Group - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 984897189 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the code of the general product posting group that will be used when you post the entry on the journal line.</source>
+          <target>Especifica el código del grupo contable de producto general que se utilizará cuando se registre el movimiento en la línea del diario.</target>
+        <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Bal. Gen. Prod. Posting Group - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 966740350 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the code that represents the payments terms that apply to the entry on the journal line.</source>
+          <target>Especifica el código que representa los términos de pago correspondientes al movimiento de la línea del diario.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Payment Terms Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 2865137134 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the type of the posted document that this document or journal line will be applied to when you post, for example to register payment.</source>
+          <target>Especifica el tipo del documento registrado en el que se liquidará esta línea de diario o documento al registrar, por ejemplo, pagos.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Applies-to Doc. Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 2899774127 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the posted document that this document or journal line will be applied to when you post, for example to register payment.</source>
+          <target>Especifica el número del documento registrado en el que se liquidará esta línea de diario o documento al registrar, por ejemplo, pagos.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Applies-to Doc. No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 1632406684 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the bill to be settled.</source>
+          <target>Especifica el número de efecto que se va a liquidar.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Applies-to Bill No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 3093642907 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the ID of entries that will be applied to when you choose the Apply Entries action.</source>
+          <target>Especifica los identificadores de los movimientos que se liquidarán cuando elija la acción Liquidar movs.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Applies-to ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 926489874 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies that the On Hold check box is selected for this transaction in the Vendor Ledger Entries window. The payable document cannot be included in a payment order nor can it be settled until the check box is deselected on the vendor ledger entry.</source>
+          <target>Especifica que la casilla de verificación Esperar está activada para esta transacción en la ventana Movimientos de proveedores. No se puede incluir el documento a pagar en una orden de pago ni se podrá liquidar hasta que se desactive la casilla de verificación del movimiento de proveedor.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control On Hold - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 265409144 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the code for the payment type, for the entry on the payment journal line.</source>
+          <target>Especifica el código del tipo de pago para el movimiento de la línea del diario de pagos.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Bank Payment Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 1908046867 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies why the entry is created. When reason codes are assigned to journal line or sales and purchase documents, all entries with a reason code will be marked during posting.</source>
+          <target>Especifica por qué se crea el movimiento. Cuando los códigos de auditoría se asignan a la línea del diario o las ventas y los documentos de compra, todas las entradas con un código de auditoría se marcarán durante el registro.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Reason Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 4068159240 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the bank account that the amount will be transferred to after it has been exported from the journal.</source>
+          <target>Especifica la cuenta bancaria a la que se transferirá el importe una vez se haya exportado del diario.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Recipient Bank Account - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 3067272760 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a code.</source>
+          <target>Especifica un código.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Pmt. Address Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 4182352612 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the direct-debit mandate that the customer has signed to allow direct debit collection of payments.</source>
+          <target>Especifica la orden de domiciliación de adeudo directo que el cliente ha firmado para permitir realizar cobros por domiciliación de pagos.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Direct Debit Mandate ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 2508701955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Account Name</source>
+          <target>Nombre cuenta</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Nombre cuenta - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 2071930329 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bal. Account Name</source>
+          <target>Nombre contrapartida</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Nombre contrapartida - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 1287395299 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bal. Account Name</source>
+          <target>Nombre contrapartida</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control BalAccName - Property Caption</note>
+        </trans-unit>
+       <trans-unit id="Page 3504180993 - Control 1287395299 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the balancing account that has been entered on the journal line.</source>
+          <target>Especifica el nombre de la cuenta de contrapartida introducida en la línea del diario.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control BalAccName - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 1345656999 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Balance</source>
+          <target>Saldo</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Saldo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 25700210 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Balance</source>
+          <target>Saldo</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Balance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 25700210 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the balance on the journal line.</source>
+          <target>Especifica el saldo de la línea del diario.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Balance - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 1722409465 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Balance</source>
+          <target>Saldo total</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control Saldo total - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 938567880 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Balance</source>
+          <target>Saldo total</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control TotalBalance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Control 938567880 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the sum of balances. </source>
+          <target>Especifica la suma de saldos. </target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Control TotalBalance - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Action 1218993023 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&amp;Line</source>
+          <target>&amp;Línea</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Action &amp;Línea - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Action 2173385693 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dimensions</source>
+          <target>Dimensiones</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Action Dimensions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Action 2173385693 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View or edit dimensions, such as area, project, or department, that you can assign to journal lines to distribute costs and analyze transaction history.</source>
+          <target>Permite ver o editar dimensiones, como el área, el proyecto o el departamento, que pueden asignarse a líneas de diario para distribuir costes y analizar el historial de transacciones.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Action Dimensions - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Action 2471326530 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>A&amp;ccount</source>
+          <target>&amp;Cuenta</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Action &amp;Cuenta - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Action 4125097576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Card</source>
+          <target>Ficha</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Action Card - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Action 4125097576 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View or change detailed information about the record that is being processed on the document or journal line.</source>
+          <target>Permite ver o cambiar la información detallada sobre el registro que se está procesando en el documento o la línea del diario.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Action Card - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Action 1008043521 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ledger E&amp;ntries</source>
+          <target>&amp;Movimientos</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Action LedgerEntries - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Action 1008043521 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View the history of transactions that have been posted for the selected record.</source>
+          <target>Permite ver el historial de transacciones que se han registrado para el registro seleccionado.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Action LedgerEntries - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Action 3295410516 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&amp;Apply Entries</source>
+          <target>&amp;Liquidar movs.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Action &amp;Liquidar movs. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Action 3295410516 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select one or more ledger entries that you want to apply this record to so that the related posted documents are closed as paid or refunded.</source>
+          <target>Permite seleccionar uno o varios movimientos contables que desea liquidar en este registro para que los documentos registrados relacionados se cierren como pagados o reembolsados.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Action &amp;Liquidar movs. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Action 2838011839 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>P&amp;osting</source>
+          <target>&amp;Registro</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Action &amp;Registro - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Action 4130217538 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reconcile</source>
+          <target>Control</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Action Reconcile - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Action 4130217538 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View the balances on bank accounts that are marked for reconciliation, usually liquid accounts.</source>
+          <target>Permite ver los saldos de las cuentas bancarias marcadas para la conciliación, normalmente cuentas de liquidez.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Action Reconcile - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Action 913412068 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test Report</source>
+          <target>Informe prueba</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Action TestReport - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Action 913412068 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Preview the resulting entries to see the consequences before you perform the actual posting.</source>
+          <target>Permite obtener una vista previa de los movimientos resultantes para ver las consecuencias antes de proceder al registro real.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Action TestReport - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Action 2282416948 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>P&amp;ost</source>
+          <target>&amp;Registrar</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Action Post - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Action 2282416948 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post the documents to indicate that they are ready to submit to the bank for payment or collection. </source>
+          <target>Registra los documentos para indicar que están preparados para enviar al banco para el pago o cobro.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Action Post - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Action 212181990 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post and &amp;Print</source>
+          <target>Registrar e &amp;imprimir</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Action PostandPrint - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - Action 212181990 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post and then print the documents to indicate that they are ready to submit to the bank for payment or collection.</source>
+          <target>Registra y después imprime los documentos para indicar que están preparados para enviar al banco para el pago o cobro.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - Action PostandPrint - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3504180993 - NamedType 570984647" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Registre las líneas del Diario. Si no, podrían aparecer incoherencias entre los datos.</source>
+          <target>Registre las líneas del Diario. Si no, podrían aparecer incoherencias entre los datos.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding Journal - NamedType Text1100000</note>
+        </trans-unit>
+        <trans-unit id="Page 724518980 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Subform Perception Keys (IRPF)</source>
+          <target>Claves percepcion IRPF</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Subform Perception Keys - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2703571208 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Subform Perception Type</source>
+          <target>Tipos de Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Subform Perception Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3833381867 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SWitholding Tax registers</source>
+          <target>Movimientos de retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding tax registers - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3833381867 - Action 3740129563 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry</source>
+          <target>Movimiento</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding tax registers - Action Movimiento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3833381867 - Action 4198902422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Applied Entries</source>
+          <target>Liquidado por movs.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding tax registers - Action Liquidado por movs. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3833381867 - Action 4292929298 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Liq. deductions</source>
+          <target>Liq. retenciones</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding tax registers - Action Liq. Deductions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3833381867 - Action 136075758 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Without invoice</source>
+          <target>Sin factura</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding tax registers - Action Sin factura - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3833381867 - Action 502449368 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>With invoice</source>
+          <target>Con factura</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding tax registers - Action Con factura - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3833381867 - Action 502449368 - Method 1377591017 - NamedType 2909337707" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se pueden liquidar mov. retención de un Abono con una Factura.</source>
+          <target>No se pueden liquidar mov. retención de un Abono con una Factura.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding tax registers - Action Con factura - Method OnAction - NamedType LocalText001</note>
+        </trans-unit>
+        <trans-unit id="Page 3833381867 - Action 502449368 - Method 1377591017 - NamedType 527460262" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se puede liquidar una factura del tipo %1 con factura</source>
+          <target>No se puede liquidar una factura del tipo %1 con factura.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding tax registers - Action Con factura - Method OnAction - NamedType LocalText002</note>
+        </trans-unit>
+        <trans-unit id="Page 3833381867 - Action 247901230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Liq. credit memo</source>
+          <target>Liquidar abono</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding tax registers - Action Liquidar abono - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3833381867 - Action 4280361868 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Navigate</source>
+          <target>Navegar</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding tax registers - Action Navegar - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3833381867 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se puede liquidar los movimientos seleccionados porque el movimiento número %1 no est  pendiente</source>
+          <target>No se puede liquidar los movimientos seleccionados porque el movimiento número %1 no est  pendiente</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding tax registers - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Page 3833381867 - NamedType 3752334001" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se puede liquidar los movimientos seleccionados porque el movimiento número %1 no tiene importe a liquidar</source>
+          <target>No se puede liquidar los movimientos seleccionados porque el movimiento número %1 no tiene importe a liquidar</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding tax registers - NamedType Text002</note>
+        </trans-unit>
+        <trans-unit id="Page 3833381867 - NamedType 95063322" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se puede liquidar el movimiento de retención número %1 porque hay una factura de liquidación pendiente de registrar. \Registrela o borrela antes de continuar</source>
+          <target>No se puede liquidar el movimiento de retención número %1 porque hay una factura de liquidación pendiente de registrar. \Registrela o borrela antes de continuar</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding tax registers - NamedType Text003</note>
+        </trans-unit>
+        <trans-unit id="Page 3833381867 - NamedType 732759939" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se puede liquidar el movimiento de retención número %1 porque hay una línea de diario pendiente de registrar. \Registrela o borrela antes de continuar</source>
+          <target>No se puede liquidar el movimiento de retención número %1 porque hay una línea de diario pendiente de registrar. \Registrela o borrela antes de continuar</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IND Witholding tax registers - NamedType Text004</note>
+        </trans-unit>
+        <trans-unit id="Report 3966394381 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>INDRA Customer - Annual Declaration</source>
+          <target>INDRA Client - Dec. Anual_Retenciones</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Client- Dec. Anual_Reten - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3966394381 - Control 1211933382 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Opciones</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Client- Dec. Anual_Reten - Control Opciones - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3966394381 - Control 3125423586 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amounts greater than</source>
+          <target>Importe mayor que</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Client- Dec. Anual_Reten - Control MinAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3966394381 - NamedType 570984647" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Importe mayor que </source>
+          <target>Importe mayor que </target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Client- Dec. Anual_Reten - NamedType Text1100000</note>
+        </trans-unit>
+        <trans-unit id="Report 3966394381 - NamedType 3482425550" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Proveedores - Declaración anual</source>
+          <target>Proveedores - Declaración anual</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Client- Dec. Anual_Reten - NamedType Customers___Annual_DeclarationCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3966394381 - NamedType 1987762555" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pag.</source>
+          <target>Pag.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Client- Dec. Anual_Reten - NamedType CurrReport_PAGENOCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3966394381 - NamedType 3118210514" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nombre y dirección</source>
+          <target>Nombre y dirección</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Client- Dec. Anual_Reten - NamedType Name_and_AddressCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3966394381 - NamedType 1556838112" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Importe (DL)</source>
+          <target>Importe (DL)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Client- Dec. Anual_Reten - NamedType SalesAmtCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3564986251 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate Withholding</source>
+          <target>Liquidar Retenciones</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Liquidar Retenciones - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3564986251 - Control 2525161371 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Liquidar por</source>
+          <target>Liquidar por</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Liquidar Retenciones - Control optTipo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3564986251 - Control 1944471324 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cuenta</source>
+          <target>Cuenta</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Liquidar Retenciones - Control txtCuenta - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3564986251 - Control 2264746146 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tipo efecto</source>
+          <target>Tipo efecto</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Liquidar Retenciones - Control chkEfecto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3564986251 - NamedType 677238065" size-unit="char" translate="yes" xml:space="preserve">
+          <source>debe tener configurada una forma de pago que genere efectos.</source>
+          <target>debe tener configurada una forma de pago que genere efectos.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Liquidar Retenciones - NamedType TextIbdos001</note>
+        </trans-unit>
+        <trans-unit id="Report 3564986251 - NamedType 39541448" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se pueden liquidar mov. retención de un Abono con un efecto.</source>
+          <target>No se pueden liquidar mov. retención de un Abono con un efecto.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Liquidar Retenciones - NamedType TextIbdos002</note>
+        </trans-unit>
+        <trans-unit id="Report 3564986251 - Method 3649365081 - NamedType 3182889260" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Liquidación retención %1</source>
+          <target>Liquidación retención %1</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Liquidar Retenciones - Method Realizaragrupacionporpais - NamedType Text001l</note>
+        </trans-unit>
+        <trans-unit id="Report 3564986251 - Method 3649365081 - NamedType 4004088077" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Liquidación retención países extranjeros.</source>
+          <target>Liquidación retención países extranjeros.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Liquidar Retenciones - Method Realizaragrupacionporpais - NamedType Text002l</note>
+        </trans-unit>
+        <trans-unit id="Report 3090623182 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Modelo 111</source>
+          <target>Modelo 111</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 111 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3090623182 - Control 989751795 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File Name</source>
+          <target>Nombre archivo</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 111 - Control FileName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3090623182 - Control 513319356 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Declaration Type</source>
+          <target>Tipo de declaración</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 111 - Control Tipo de Declaración - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3090623182 - Control 3911224337 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fiscal year</source>
+          <target>Ejercicio</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 111 - Control Ejercicio - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3090623182 - Control 649163892 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <target>Tipo</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 111 - Control TipoPeriodo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3090623182 - Control 2541290025 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Monthly period</source>
+          <target>Periodo mensual</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 111 - Control Periodo mensual - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3090623182 - Control 1959993887 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Trimestral Period</source>
+          <target>Periodo trimestral</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 111 - Control Periodo trimestral - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3090623182 - Control 1216174397 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Contact person</source>
+          <target>Persona de contacto</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 111 - Control PersonaContacto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3090623182 - Control 4230275697 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Contact Phone</source>
+          <target>Teléfono de contacto</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 111 - Control TelefonoContacto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3090623182 - Control 3860868788 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Perceptor Numbers</source>
+          <target>Nº Perceptores</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 111 - Control NPerceptores - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3090623182 - Control 2615594237 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Perception rend. amount</source>
+          <target>Importe Percepciones Rendimientos</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 111 - Control ImpPerRendTrab - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3090623182 - Control 4096209785 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Work Ret. amount</source>
+          <target>Importe Retenciones Movimientos Trabajo</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 111 - Control ImpRetRendTrab - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3090623182 - Control 1428355089 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cash</source>
+          <target>Efectivo</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 111 - Control VEfectivo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3090623182 - Control 1804050633 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bank</source>
+          <target>Banco</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 111 - Control VBanco - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3090623182 - Control 2334310656 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bank code</source>
+          <target>Cód. banco</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 111 - Control CodeBanco - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3090623182 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Se ha generado correctamente el fichero</source>
+          <target>Se ha generado correctamente el fichero</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 111 - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Report 3090623182 - NamedType 3752334001" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El modelo 111 se ha exportado correctamente: %1.</source>
+          <target>El modelo 111 se ha exportado correctamente: %1.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 111 - NamedType Text002</note>
+        </trans-unit>
+        <trans-unit id="Report 3090623182 - NamedType 95063322" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ruta para exportar el archivo 111.</source>
+          <target>Ruta para exportar el archivo 111.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 111 - NamedType Text003</note>
+        </trans-unit>
+        <trans-unit id="Report 328640749 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Model 190</source>
+          <target>Modelo 190</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 190 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 328640749 - Control 2417218017 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File Name</source>
+          <target>Nombre archivo</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 190 - Control FilenName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 328640749 - Control 4218285892 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Declaration Number</source>
+          <target>Número declaración</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 190 - Control NDecl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 328640749 - Control 1241688413 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Declaration Nº</source>
+          <target>Nº Declaración anterior</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 190 - Control NDeclAnt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 328640749 - Control 3911224337 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fiscal year</source>
+          <target>Ejercicio</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 190 - Control Ejercicio - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 328640749 - Control 1216174397 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Contact phone</source>
+          <target>Persona de contacto</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 190 - Control PersonaContacto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 328640749 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Se ha generado correctamente el fichero</source>
+          <target>Se ha generado correctamente el fichero</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 190 - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Report 328640749 - NamedType 3752334001" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Al indicar declaración complementaria o sustitutiva debe indicar un número de declaración anterior</source>
+          <target>Al indicar declaración complementaria o sustitutiva debe indicar un número de declaración anterior</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 190 - NamedType Text002</note>
+        </trans-unit>
+        <trans-unit id="Report 328640749 - NamedType 95063322" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ruta para exportar el archivo 190.</source>
+          <target></target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 190 - NamedType Text003</note>
+        </trans-unit>
+        <trans-unit id="Report 328640749 - NamedType 732759939" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Número declaración debe tener 13 caracteres</source>
+          <target>Número declaración debe tener 13 caracteres</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 190 - NamedType Text004</note>
+        </trans-unit>
+        <trans-unit id="Report 328640749 - NamedType 309772879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>µ·ÔÒÖÞàãêéë¥š€()"&amp;ïŽÓØ™ûš$'§¦</source>
+          <target>µ·ÔÒÖÞàãêéë¥š€()"&amp;ïŽÓØ™ûš$'§¦</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Modelo 190 - NamedType SpanishSpecialCharactersTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 2527312731 - Control 1211933382 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Opciones</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Prov - Dec. Anual_Reten - Control Opciones - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2527312731 - Control 3125423586 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amounts greater than</source>
+          <target>Importe mayor que</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Prov - Dec. Anual_Reten - Control MinAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2527312731 - NamedType 570984647" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Importe mayor que </source>
+          <target>Importe mayor que </target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Prov - Dec. Anual_Reten - NamedType Text1100000</note>
+        </trans-unit>
+        <trans-unit id="Report 2527312731 - NamedType 91334966" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Proveedores - Declaración anual</source>
+          <target>Proveedores - Declaración anual</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Prov - Dec. Anual_Reten - NamedType Vendors___Annual_DeclarationCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2527312731 - NamedType 1987762555" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pag.</source>
+          <target>Pag.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Prov - Dec. Anual_Reten - NamedType CurrReport_PAGENOCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2527312731 - NamedType 3118210514" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nombre y dirección</source>
+          <target>Nombre y dirección</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Prov - Dec. Anual_Reten - NamedType Name_and_AddressCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2527312731 - NamedType 3707689745" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Importe (DL)</source>
+          <target>Importe (DL)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Prov - Dec. Anual_Reten - NamedType PurchaseAmtCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1929665173 - NamedType 2018001435" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total para </source>
+          <target>Total para </target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Retenciones IRPF - NamedType TotalFor</note>
+        </trans-unit>
+        <trans-unit id="Report 1929665173 - NamedType 646627398" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Retenciones IRPF</source>
+          <target>Retenciones IRPF</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Retenciones IRPF - NamedType Deductions_IRPFCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1929665173 - NamedType 1987762555" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Page</source>
+          <target>Pag.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Retenciones IRPF - NamedType CurrReport_PAGENOCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1929665173 - NamedType 2509633187" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Importe retención (DL)</source>
+          <target>Importe retención (DL)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Retenciones IRPF - NamedType Deduction_Amount__LCY_CaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1929665173 - NamedType 3936188029" size-unit="char" translate="yes" xml:space="preserve">
+          <source>% retención</source>
+          <target>% retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Retenciones IRPF - NamedType DeductionCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1929665173 - NamedType 338243756" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Base retención (DL)</source>
+          <target>Base retención (DL)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Retenciones IRPF - NamedType Deduction_Base__LCY_CaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1929665173 - NamedType 638740601" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fecha registro</source>
+          <target>Fecha registro</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Retenciones IRPF - NamedType Posting_DateCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1929665173 - NamedType 423222988" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CIF/NIF</source>
+          <target>CIF/NIF</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Retenciones IRPF - NamedType VAT_Registration_No_CaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1929665173 - NamedType 2763383773" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nombre</source>
+          <target>Nombre</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Retenciones IRPF - NamedType NameCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1929665173 - NamedType 3549174139" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nº proveedor</source>
+          <target>Nº proveedor</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Retenciones IRPF - NamedType Vendor_No_CaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1929665173 - NamedType 2680280112" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nº factura</source>
+          <target>Nº factura</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Retenciones IRPF - NamedType Invoice_No_CaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1929665173 - NamedType 4016897307" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Clave IRPF</source>
+          <target>Clave IRPF</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Retenciones IRPF - NamedType Key_IRPFCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1929665173 - NamedType 3665281700" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nº factura</source>
+          <target>Nº factura</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Retenciones IRPF - NamedType Invoice_No_Caption_Control1100292027Lbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1929665173 - NamedType 2956499046" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nº proveedor</source>
+          <target>Nº proveedor</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Retenciones IRPF - NamedType Vendor_No_Caption_Control1100292028Lbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1929665173 - NamedType 578037795" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nombre</source>
+          <target>Nombre</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Retenciones IRPF - NamedType NameCaption_Control1100292029Lbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1929665173 - NamedType 3780551814" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CIF/NIF</source>
+          <target>CIF/NIF</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Retenciones IRPF - NamedType VAT_Registration_No_Caption_Control1100292030Lbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1929665173 - NamedType 847794368" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fecha registro</source>
+          <target>Fecha registro</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Retenciones IRPF - NamedType Posting_DateCaption_Control1100292031Lbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1929665173 - NamedType 2518012196" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Base retención (DL)</source>
+          <target>Base retención (DL)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Retenciones IRPF - NamedType Deduction_Base__LCY_Caption_Control1100292032Lbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1929665173 - NamedType 4130092358" size-unit="char" translate="yes" xml:space="preserve">
+          <source>% retención</source>
+          <target>% retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Retenciones IRPF - NamedType DeductionCaption_Control1100292033Lbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1929665173 - NamedType 3282899625" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Importe retención (DL)</source>
+          <target>Importe retención (DL)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IND Retenciones IRPF - NamedType Deduction_Amount__LCY_Caption_Control1100292034Lbl</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 619963795 - Action 1122275619 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3580867622">
+          <source>Create witholding tax line</source>
+          <target>Crear línea retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension IND Purchase Journal - Action Crear lín. retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 289572118 - Action 1659732381 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1727838235">
+          <source>Create witholding tax line</source>
+          <target>Crear línea retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension IND Sales Journal - Action Crear línea retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1016632585 - Field 1448903468 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4050813720">
+          <source>Tipo perceptor liq.</source>
+          <target>Tipo perceptor liq.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND General Ledger Setup - Field Tipo perceptor liq. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1016632585 - Field 3539361379 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4050813720">
+          <source>Key perception liq.</source>
+          <target>Clave percepción liq.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND General Ledger Setup - Field Clave percepción liq. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1016632585 - Field 2059537785 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4050813720">
+          <source>Deduction Template</source>
+          <target>Libro retenciones</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND General Ledger Setup - Field Libro retenciones - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1016632585 - Field 1849318193 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4050813720">
+          <source>Deductions Batch</source>
+          <target>Sección retenciones</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND General Ledger Setup - Field Sección retenciones - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1016632585 - Field 4125645248 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4050813720">
+          <source>Auxiliar Deductions Batch</source>
+          <target>Sección auxiliar retenciones</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND General Ledger Setup - Field Sección auxiliar retenciones - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1191192616 - Field 3540042576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Type Perception</source>
+          <target>Tipo Percepcion</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purch. Cr. Memo Hdr. - Field Tipo Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1191192616 - Field 3965789493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Key Perception</source>
+          <target>Clave Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purch. Cr. Memo Hdr. - Field Clave Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1596631558 - Field 3008296159 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 518488723">
+          <source>Deduction Entry</source>
+          <target>Mov. retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purch. Cr. Memo Line - Field Mov. retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1596631558 - Field 3540042576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 518488723">
+          <source>Perception Type</source>
+          <target>Tipo Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purch. Cr. Memo Line - Field Tipo Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1596631558 - Field 3965789493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 518488723">
+          <source>Perception key</source>
+          <target>Clave Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purch. Cr. Memo Line - Field Clave Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1596631558 - Field 2016603194 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 518488723">
+          <source>Deduction Line</source>
+          <target>Lín. retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purch. Cr. Memo Line - Field Lín. retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1596631558 - Field 3574597114 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 518488723">
+          <source>Retention Account</source>
+          <target>Cuenta de Retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purch. Cr. Memo Line - Field Cuenta de Retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1400771811 - Field 3540042576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Type Perception</source>
+          <target>Tipo Percepcion</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purch. Inv. Header - Field Tipo Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1400771811 - Field 3965789493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Key Perception</source>
+          <target>Clave Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purch. Inv. Header - Field Clave Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2445218364 - Field 3008296159 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2575310733">
+          <source>Deduction Entry</source>
+          <target>Mov. retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purch. Inv. Line - Field Mov. retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2445218364 - Field 3540042576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2575310733">
+          <source>Perception Type</source>
+          <target>Tipo Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purch. Inv. Line - Field Tipo Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2445218364 - Field 3965789493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2575310733">
+          <source>Perception key</source>
+          <target>Clave Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purch. Inv. Line - Field Clave Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2445218364 - Field 2016603194 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2575310733">
+          <source>Deduction Line</source>
+          <target>Lín. retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purch. Inv. Line - Field Lín. retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2445218364 - Field 3574597114 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2575310733">
+          <source>Retention Account</source>
+          <target>Cuenta de Retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purch. Inv. Line - Field Cuenta de Retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3128956655 - Field 3540042576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Type Perception</source>
+          <target>Tipo Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purch. Rcpt. Header - Field Tipo Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3128956655 - Field 3965789493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Key Perception</source>
+          <target>Clave Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purch. Rcpt. Header - Field Clave Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 212575464 - Field 3008296159 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 959319265">
+          <source>Deduction Entry</source>
+          <target>Mov. retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purch. Rcpt. Line - Field Mov. retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 212575464 - Field 3540042576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 959319265">
+          <source>Perception Type</source>
+          <target>Tipo Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purch. Rcpt. Line - Field Tipo Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 212575464 - Field 3965789493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 959319265">
+          <source>Perception key</source>
+          <target>Clave Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purch. Rcpt. Line - Field Clave Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 212575464 - Field 2016603194 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 959319265">
+          <source>Deduction Line</source>
+          <target>Lín. retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purch. Rcpt. Line - Field Lín. retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 212575464 - Field 3574597114 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 959319265">
+          <source>Retention Account</source>
+          <target>Cuenta de Retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purch. Rcpt. Line - Field Cuenta de Retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3708754129 - Field 3540042576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Perception Type</source>
+          <target>Tipo Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purchase Header - Field Tipo Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3708754129 - Field 3965789493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Perception Key</source>
+          <target>Clave Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purchase Header - Field Clave Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3708754129 - NamedType 824275241" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Aplicar a todas las líneas,Aplicar desde la última línea de retención</source>
+          <target>Aplicar a todas las líneas,Aplicar desde la última línea de retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purchase Header - NamedType TextRet0001</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2642061290 - Field 3008296159 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1519909599">
+          <source>Deduction Entry</source>
+          <target>Mov. retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purchase Line - Field Mov. retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2642061290 - Field 3540042576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1519909599">
+          <source>Perception Type</source>
+          <target>Tipo Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purchase Line - Field Tipo Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2642061290 - Field 3965789493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1519909599">
+          <source>Perception key</source>
+          <target>Clave Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purchase Line - Field Clave Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2642061290 - Field 2016603194 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1519909599">
+          <source>Deduction Line</source>
+          <target>Lín. retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purchase Line - Field Lín. retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2642061290 - NamedType 824275241" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1519909599">
+          <source>Aplicar a todas las líneas,Aplicar desde la última línea de retención</source>
+          <target>Aplicar a todas las líneas,Aplicar desde la última línea de retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Purchase Line - NamedType TextRet0001</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1861943449 - Field 388366372 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1936001480">
+          <source>Amount retention.Rent</source>
+          <target>Importe Ret. Alquileres</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Vendor - Field Importe Ret. Alquileres - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1861943449 - Field 3788836050 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1936001480">
+          <source>Ret Amount. Guarantee</source>
+          <target>Importe Ret. Garantía</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Vendor - Field Importe Ret. Garantía - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1861943449 - Field 2814774567 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1936001480">
+          <source>Amount professional retention</source>
+          <target>Importe Ret. Profesional</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Vendor - Field Importe Ret. Profesional - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1861943449 - Field 4049529724 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1936001480">
+          <source>Amount retention others</source>
+          <target>Importe Ret. Otros</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Vendor - Field Importe Ret. Otros - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1861943449 - Field 3540042576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1936001480">
+          <source>Perception Type</source>
+          <target>Tipo Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Vendor - Field Tipo Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1861943449 - Field 3965789493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1936001480">
+          <source>Key Perception</source>
+          <target>Clave Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Vendor - Field Clave Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3554682372 - Field 145601772 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3469146285">
+          <source>Código administración mod. 110</source>
+          <target>Código administración mod. 110</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Company Information - Field Código administración mod. 110 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2678372498 - Field 612857295 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4274826855">
+          <source>Account type Deduction</source>
+          <target>Tipo Cuenta Retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND G_L Account - Field Tipo Cuenta retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2678372498 - Field 612857295 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4274826855">
+          <source> ,Vendor,Customer</source>
+          <target> ,Proveedor,Cliente</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND G_L Account - Field Tipo Cuenta retención - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1366039234 - Field 3540042576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>Perception Type</source>
+          <target>Tipo Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Gen. Journal Line - Field Tipo Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1366039234 - Field 1476261205 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>Perception Key</source>
+          <target>Clave Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Gen. Journal Line - Field Clave percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1366039234 - Field 3623060038 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>Retention Base</source>
+          <target>Base retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Gen. Journal Line - Field Base retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1366039234 - Field 961998961 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>Retention Amount</source>
+          <target>Importe retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Gen. Journal Line - Field Importe retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1366039234 - Field 2260641596 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>Retention percentage</source>
+          <target>Retention percentage</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Gen. Journal Line - Field Porcentaje retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1366039234 - Field 3008296159 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>Entry. Retention</source>
+          <target>Mov. retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Gen. Journal Line - Field Mov. retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1366039234 - Field 2270576013 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>Year Accrual</source>
+          <target>Año devengo</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Gen. Journal Line - Field Año devengo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1366039234 - Field 3091357055 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>No. doc. retention</source>
+          <target>Nº doc. retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Gen. Journal Line - Field Nº doc. retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1366039234 - Field 1593928191 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>Liq. Retention</source>
+          <target>Liq. retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Gen. Journal Line - Field Liq. retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1366039234 - Field 191767701 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>C.P.</source>
+          <target>C.P.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Gen. Journal Line - Field C.P. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1366039234 - Field 3315524211 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>Customer/Vendor</source>
+          <target>Cliente/Proveedor</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Gen. Journal Line - Field Cliente/Proveedor - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1366039234 - Field 3315524211 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>Customer,Vendor</source>
+          <target>Customer,Vendor</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Gen. Journal Line - Field Cliente/Proveedor - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1366039234 - Field 1400168855 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>Customer/Vendor No.</source>
+          <target>Nº Cliente/Proveedor</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Gen. Journal Line - Field Nº Cliente/Proveedor - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1366039234 - Field 2639255290 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>Invoice Amount</source>
+          <target>Importe Factura</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Gen. Journal Line - Field Importe Factura - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1366039234 - Field 2257076082 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>Invoice</source>
+          <target>Factura</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Gen. Journal Line - Field Factura - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1366039234 - Field 2257076082 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>With invoice, No invoice</source>
+          <target>Con factura,Sin factura</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Gen. Journal Line - Field Factura - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1366039234 - Field 1923993130 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>Bill</source>
+          <target>Efecto</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Gen. Journal Line - Field Efecto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1366039234 - Field 1906744160 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>Type Liquidation</source>
+          <target>Tipo liquidación</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Gen. Journal Line - Field Tipo Liquidacion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1366039234 - Field 1906744160 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>Customer/Vendor,Bank,Account</source>
+          <target>Cliente/Proveedor,Banco,Cuenta</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Gen. Journal Line - Field Tipo Liquidacion - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1366039234 - Field 3414008459 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>Level 7</source>
+          <target>Nivel 7</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Gen. Journal Line - Field Nº mov. retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1366039234 - NamedType 824275241" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>No se puede hacer retención con cuenta de contrapartida.</source>
+          <target>No se puede hacer retención con cuenta de contrapartida.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Gen. Journal Line - NamedType TextRet0001</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1366039234 - NamedType 186578624" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>No se puede cambiar pago por pagar‚ si se ha generado pagar‚. Elimine el pagar‚ antes de desmarcar.</source>
+          <target>No se puede cambiar pago por pagar‚ si se ha generado pagar‚. Elimine el pagar‚ antes de desmarcar.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Gen. Journal Line - NamedType TextRet0002</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1366039234 - NamedType 3843849303" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>Si se realiza pago mediante pagar‚, no debe informarse %1</source>
+          <target>Si se realiza pago mediante pagar‚, no debe informarse %1</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Gen. Journal Line - NamedType TextRet0003</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2983733681 - Field 4179605547 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 960536736">
+          <source> ,G/L Account,Customer,Vendor,Bank Account,Fixed Asset,Maintenance,VAT,Retention</source>
+          <target> ,Cuenta,Cliente,Proveedor,Banco,Activo fijo,Mantenimiento,IVA,Retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Reversal Entry - Field Entry Type IRPF - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2983733681 - Field 4179605547 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 960536736">
+          <source>Entry Type</source>
+          <target>Tipo Movimiento</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Reversal Entry - Field Entry Type IRPF - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 323451649 - Field 388366372 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
+          <source>Amount retention.Rent</source>
+          <target>Importe Ret. Alquileres</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Customer - Field Importe Ret. Alquileres - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 323451649 - Field 3788836050 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
+          <source>Ret Amount. Guarantee</source>
+          <target>Importe Ret. Garantía</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Customer - Field Importe Ret. Garantía - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 323451649 - Field 2814774567 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
+          <source>Amount professional retention</source>
+          <target>Importe Ret. Profesional</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Customer - Field Importe Ret. Profesional - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 323451649 - Field 4049529724 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
+          <source>Amount retention others</source>
+          <target>Importe Ret. Otros</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Customer - Field Importe Ret. Otros - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 323451649 - Field 3540042576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
+          <source>Perception Type</source>
+          <target>Tipo Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Customer - Field Tipo Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 323451649 - Field 3965789493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
+          <source>Key Perception</source>
+          <target>Clave Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Customer - Field Clave Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1927955531 - Field 3540042576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Type Perception</source>
+          <target>Tipo Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Cr.Memo Header - Field Tipo Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1927955531 - Field 3965789493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Key Perception</source>
+          <target>Clave Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Cr.Memo Header - Field Clave Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 90679076 - Field 3540042576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
+          <source>Perception Type</source>
+          <target>Tipo Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Cr.Memo Line - Field Tipo Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 90679076 - Field 3965789493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
+          <source>Perception key</source>
+          <target>Clave Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Cr.Memo Line - Field Clave Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 90679076 - Field 2016603194 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
+          <source>Deduction Line</source>
+          <target>Lín. retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Cr.Memo Line - Field Lín. retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 90679076 - Field 3008296159 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
+          <source>Deduction Entry</source>
+          <target>Mov. retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Cr.Memo Line - Field Mov. retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 90679076 - Field 3574597114 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
+          <source>Retention Account</source>
+          <target>Cuenta de Retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Cr.Memo Line - Field Cuenta de Retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1841507432 - Field 3540042576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Type Perception</source>
+          <target>Tipo Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Header - Field Tipo Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1841507432 - Field 3965789493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Key Perception</source>
+          <target>Clave Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Header - Field Clave Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2902974663 - Field 3540042576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Type Perception</source>
+          <target>Tipo Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Invoice Header - Field Tipo Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2902974663 - Field 3965789493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Key Perception</source>
+          <target>Clave Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Invoice Header - Field Clave Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1143874400 - Field 3540042576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2079186865">
+          <source>Perception Type</source>
+          <target>Tipo Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Invoice Line - Field Tipo Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1143874400 - Field 3965789493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2079186865">
+          <source>Perception key</source>
+          <target>Clave Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Invoice Line - Field Clave Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1143874400 - Field 2016603194 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2079186865">
+          <source>Deduction Line</source>
+          <target>Lín. retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Invoice Line - Field Lín. retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1143874400 - Field 3008296159 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2079186865">
+          <source>Deduction Entry</source>
+          <target>Mov. retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Invoice Line - Field Mov. retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1143874400 - Field 3574597114 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2079186865">
+          <source>Retention Account</source>
+          <target>Cuenta de Retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Invoice Line - Field Cuenta de Retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 318978127 - Field 3540042576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>Perception Type</source>
+          <target>Tipo Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Line - Field Tipo Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 318978127 - Field 3965789493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>Perception key</source>
+          <target>Clave Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Line - Field Clave Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 318978127 - Field 2016603194 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>Deduction Line</source>
+          <target>Lín. retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Line - Field Lín. retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 318978127 - Field 3008296159 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>Deduction Entry</source>
+          <target>Mov. retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Line - Field Mov. retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 318978127 - Field 3574597114 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>Retention Account</source>
+          <target>Cuenta de Retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Line - Field Cuenta de Retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 318978127 - NamedType 824275241" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>Aplicar a todas las líneas,Aplicar desde la última línea de retención</source>
+          <target>Aplicar a todas las líneas,Aplicar desde la última línea de retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Line - NamedType TextRet0001</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2927310416 - Field 3540042576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
+          <source>Type Perception</source>
+          <target>Tipo Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Shipment Header - Field Tipo Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2927310416 - Field 3965789493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
+          <source>Key Perception</source>
+          <target>Clave Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Shipment Header - Field Clave Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4102494231 - Field 3540042576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1114148978">
+          <source>Perception Type</source>
+          <target>Tipo Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Shipment Line - Field Tipo Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4102494231 - Field 3965789493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1114148978">
+          <source>Perception key</source>
+          <target>Clave Percepción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Shipment Line - Field Clave Percepción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4102494231 - Field 2016603194 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1114148978">
+          <source>Deduction Line</source>
+          <target>Lín. retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Shipment Line - Field Lín. retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4102494231 - Field 3008296159 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1114148978">
+          <source>Deduction Entry</source>
+          <target>Mov. retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Shipment Line - Field Mov. retención - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4102494231 - Field 3574597114 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1114148978">
+          <source>Retention Account</source>
+          <target>Cuenta de Retención</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension IND Sales Shipment Line - Field Cuenta de Retención - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
