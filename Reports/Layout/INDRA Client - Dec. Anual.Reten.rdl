@@ -1211,7 +1211,7 @@
                     </TablixMember>
                     <TablixMember>
                       <Visibility>
-                        <Hidden>=iif(Fields!GroupNo.Value = Last(Fields!GroupNo.Value, "DataSet_Result"), False, True)</Hidden>
+                        <Hidden>=iif(Fields!GroupNo.Value = Last(Fields!GroupNo.Value, "DataSet_Result"), false, true)</Hidden>
                       </Visibility>
                       <KeepWithGroup>Before</KeepWithGroup>
                       <KeepTogether>true</KeepTogether>
@@ -1222,7 +1222,7 @@
             </TablixRowHierarchy>
             <DataSetName>DataSet_Result</DataSetName>
             <PageBreak>
-              <BreakLocation>End</BreakLocation>
+              <BreakLocation>end</BreakLocation>
             </PageBreak>
             <Top>0.423cm</Top>
             <Height>5.922cm</Height>
@@ -1248,7 +1248,7 @@
             <Width>11.676cm</Width>
             <ZIndex>1</ZIndex>
             <Visibility>
-              <Hidden>=IIF(Fields!CustFilter.Value="",TRUE,FALSE)</Hidden>
+              <Hidden>=IIF(Fields!CustFilter.Value="",true,false)</Hidden>
             </Visibility>
             <DataElementOutput>NoOutput</DataElementOutput>
             <Style>
@@ -1383,7 +1383,7 @@
               <Width>3.25cm</Width>
               <ZIndex>4</ZIndex>
               <Visibility>
-                <Hidden>=iif(ReportItems!Customers___Annual_DeclarationCaption.Value = "", True, False)</Hidden>
+                <Hidden>=iif(ReportItems!Customers___Annual_DeclarationCaption.Value = "", true, false)</Hidden>
               </Visibility>
               <DataElementOutput>NoOutput</DataElementOutput>
               <Style>
@@ -1413,7 +1413,7 @@
               <Width>0.45cm</Width>
               <ZIndex>5</ZIndex>
               <Visibility>
-                <Hidden>=iif(ReportItems!Customers___Annual_DeclarationCaption.Value = "", True, False)</Hidden>
+                <Hidden>=iif(ReportItems!Customers___Annual_DeclarationCaption.Value = "", true, false)</Hidden>
               </Visibility>
               <DataElementOutput>NoOutput</DataElementOutput>
               <Style>
@@ -1439,35 +1439,35 @@
         Return ""
     end if
     Return Value
-End Function
+end Function
 
 Public Function BlankPos(ByVal Value As Decimal)
     if Value &gt; 0 then
         Return ""
     end if
     Return Value
-End Function
+end Function
 
 Public Function BlankZeroAndPos(ByVal Value As Decimal)
     if Value &gt;= 0 then
         Return ""
     end if
     Return Value
-End Function
+end Function
 
 Public Function BlankNeg(ByVal Value As Decimal)
     if Value &lt; 0 then
         Return ""
     end if
     Return Value
-End Function
+end Function
 
 Public Function BlankNegAndZero(ByVal Value As Decimal)
     if Value &lt;= 0 then
         Return ""
     end if
     Return Value
-End Function
+end Function
 </Code>
   <Language>=User!Language</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>

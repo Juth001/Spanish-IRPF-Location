@@ -3677,35 +3677,35 @@ Cstr(Last(Fields!PurchInvLinePmtDiscRcdAmount.Value))
         Return ""
     end if
     Return Value
-End Function
+end Function
 
 Public Function BlankPos(ByVal Value As Decimal)
     if Value &gt; 0 then
         Return ""
     end if
     Return Value
-End Function
+end Function
 
 Public Function BlankZeroAndPos(ByVal Value As Decimal)
     if Value &gt;= 0 then
         Return ""
     end if
     Return Value
-End Function
+end Function
 
 Public Function BlankNeg(ByVal Value As Decimal)
     if Value &lt; 0 then
         Return ""
     end if
     Return Value
-End Function
+end Function
 
 Public Function BlankNegAndZero(ByVal Value As Decimal)
     if Value &lt;= 0 then
         Return ""
     end if
     Return Value
-End Function
+end Function
 
 
 Shared offset as Integer
@@ -3713,41 +3713,41 @@ Shared newPage as Object
 Shared currentgroup1 as Object
 Shared currentgroup2 as Object
 Public Function GetGroupPageNumber(NewPage as Boolean, pagenumber as Integer) as Object
-  If NewPage
+  if NewPage
     offset = pagenumber - 1
-  End If
+  end if
   Return pagenumber - offset
-End Function
+end Function
 
 Public Function IsNewPage(group1 as Object, group2 as Object) As Boolean
-newPage = FALSE
-If Not (group1 = currentgroup1)
-   NewPage = TRUE
+newPage = false
+if Not (group1 = currentgroup1)
+   NewPage = true
    currentgroup2 = group2
    currentgroup1 = group1
-ELSE
-   If Not (group2 = currentgroup2)
-      NewPage = TRUE
+else
+   if Not (group2 = currentgroup2)
+      NewPage = true
       currentgroup2 = group2
-   End If
-End If
+   end if
+end if
 Return NewPage
-End Function
+end Function
 
 Shared Data1 as Object
 
 Public Function GetData(Num as Integer, Group as integer) as Object
 if Group = 1 then
    Return Cstr(Choose(Num, Split(Cstr(Data1),Chr(177))))
-End If
-End Function
+end if
+end Function
 
 Public Function SetData(NewData as Object,Group as integer)
-  If Group = 1 and NewData &gt; "" Then
+  if Group = 1 and NewData &gt; "" then
       Data1 = NewData
-  End If
-  Return True
-End Function</Code>
+  end if
+  Return true
+end Function</Code>
   <Language>=User!Language</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>

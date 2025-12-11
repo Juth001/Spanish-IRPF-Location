@@ -1,4 +1,7 @@
-namespace ScriptumVita.IRPF;
+namespace Excelia.IRPF;
+using Microsoft.Bank.BankAccount;
+using System.IO;
+using System.Utilities;
 report 86304 "IND Modelo 190"
 {
     // version INDRA
@@ -10,53 +13,53 @@ report 86304 "IND Modelo 190"
 
     dataset
     {
-        dataitem("INDRA Witholding Tax registers"; "IND Witholding Tax registers")
+        dataitem("INDRA Witholding Tax registers"; "EXC Retention Tax registers")
         {
             // ++OT2-055483
             RequestFilterFields = "Clave de Percepción", "Clave IRPF", Pendiente;
-            //DataItemTableView = sorting("Cif/Nif") where(Pendiente = const(True));
-            DataItemTableView = sorting("Cif/Nif") WHERE("% RETENCIÓN" = filter(<> 0));
+            //DataItemTableView = sorting("Cif/Nif") where(Pendiente = const(true));
+            DataItemTableView = sorting("CIF/NIF") WHERE("% RETENCIÓN" = filter(<> 0));
 
             // --OT2-055483
             trigger OnPreDataItem()
             var
                 myInt: Integer;
             begin
-                IF (Complementaria OR Sustitutiva) AND (NDeclAnt = '') THEN ERROR(Text002);
-                ConfConta.GET;
-                //ConfConta.TESTFIELD("Ruta fichero modelo 190");
+                if (Complementaria OR Sustitutiva) AND (NDeclAnt = '') then ERROR(Text002);
+                ConfConta.Get();
+                //ConfConta.Testfield("Ruta fichero modelo 190");
                 //TxModelo190 := ConfConta."Ruta fichero modelo 190" + 'modelo_190_' + FormateaNombreFichero + '.txt';
-                //**CLEAR(FILE);
+                //**clear(FILE);
                 //***
                 /*
                 ServerTempFileName := RBMgt.ServerTempFileName('txt');
 
-                CLEAR(OutFile);
-                OutFile.TEXTMODE := TRUE;
-                OutFile.WRITEMODE := TRUE;
+                clear(OutFile);
+                OutFile.TEXTMODE := true;
+                OutFile.WRITEMODE := true;
                 OutFile.CREATE(ServerTempFileName);
                 OutFile.CREATEOUTSTREAM(Outstr);
                 */
                 tempblob.CreateOutStream(OutStr);
                 //***
-                InfoEmprev.GET;
+                InfoEmprev.Get();
                 /*
-                FichModelo190.TEXTMODE := TRUE;
-                FichModelo190.WRITEMODE := TRUE;
-                IF NOT EXISTS(TxModelo190) THEN
+                FichModelo190.TEXTMODE := true;
+                FichModelo190.WRITEMODE := true;
+                if NOT EXISTS(TxModelo190) then
                     FichModelo190.CREATE(TxModelo190)
-                ELSE BEGIN
+                else begin
                     FichModelo190.OPEN(TxModelo190);
                     FichModelo190.SEEK(FichModelo190.LEN);
-                END;
+                end;
                 */
                 //Fichero temporal en el servidor
-                //CLEAR(TempFile);
+                //clear(TempFile);
                 //TempFile.CREATETEMPFILE;
                 //Construye filtro fecha
                 FechaIni := DMY2DATE(1, 1, Ejercicio);
                 FechaFin := DMY2DATE(31, 12, Ejercicio);
-                SETRANGE("Fecha registro", FechaIni, FechaFin);
+                Setrange("Fecha registro", FechaIni, FechaFin);
                 NoRegDistinto0 := 0;
                 BaseReten := 0;
                 ImporteReten := 0;
@@ -66,9 +69,9 @@ report 86304 "IND Modelo 190"
                 // Registro de Cabecera
                 Tipo1 := ' ';
                 Tipo2 := ' ';
-                IF Complementaria THEN Tipo1 := 'C';
-                IF Sustitutiva THEN Tipo2 := 'S';
-                CuentaTotales;
+                if Complementaria then Tipo1 := 'C';
+                if Sustitutiva then Tipo2 := 'S';
+                CuentaTotales();
                 //++TEC 001
                 PersonaContacto := CONVERTSTR(UPPERCASE(PersonaContacto), '¦()', '   ');
                 TempNombEmpresa := CONVERTSTR(UPPERCASE(InfoEmprev.Name), '¦()', '   ');
@@ -105,39 +108,39 @@ report 86304 "IND Modelo 190"
                 //***
                 Outstr.WRITETEXT(TextoSalida);
                 //***
-            END;
+            end;
 
             trigger OnAfterGetRecord()
             var
                 myInt: Integer;
             begin
                 //++TEC 001
-                UltimoMov := "INDRA Witholding Tax registers"."Nº mov.";
+                UltimoMov := "INDRA Witholding Tax registers"."Entry No.";
                 //--TEC 001
-                ComprobarCIF("INDRA Witholding Tax registers"."Cif/Nif");
+                ComprobarCIF("INDRA Witholding Tax registers"."CIF/NIF");
                 //Control agrupacion por CIF
-                IF Encontrado = TRUE THEN BEGIN
+                if Encontrado = true then begin
                     BaseRetencion += "INDRA Witholding Tax registers"."Base retención";
                     ImporteRetencion += "INDRA Witholding Tax registers"."Importe retención";
-                    CurrReport.SKIP;
-                END
-                ELSE BEGIN
+                    CurrReport.SKIP();
+                end
+                else begin
                     BaseRetencion += "INDRA Witholding Tax registers"."Base retención";
                     ImporteRetencion += "INDRA Witholding Tax registers"."Importe retención";
-                END;
-                IF "% retención" <> 0 THEN BEGIN
+                end;
+                if "% retención" <> 0 then begin
                     NoRegDistinto0 += 1;
                     BaseReten += "Base retencion (DL)";
                     ImporteReten += "Importe retención (DL)";
-                END
-                ELSE BEGIN
+                end
+                else begin
                     NoRegIgual0 += 1;
                     BaseRetenIgualCero += "Base retencion (DL)";
-                END;
+                end;
                 CeutaMelilla := '0';
-                IF ("Código provincia" = '51') OR ("Código provincia" = '52') THEN CeutaMelilla := '1';
-                CLEAR(TVend);
-                IF TVend.GET("INDRA Witholding Tax registers"."Nº Proveedor / Nº Cliente") THEN;
+                if ("Código provincia" = '51') OR ("Código provincia" = '52') then CeutaMelilla := '1';
+                clear(TVend);
+                if TVend.Get("INDRA Witholding Tax registers"."Nº Proveedor / Nº Cliente") then;
                 //++TEC 001
                 TempNombre := CONVERTSTR(UPPERCASE("Nombre 1"), 'ª()', '   ');
                 TempNombre := FormatTextName(TempNombre);
@@ -147,7 +150,7 @@ report 86304 "IND Modelo 190"
  '190' + //Modelo declaración 2 - 4
  PADSTR(FORMAT(Ejercicio), 4, ' ') + //Ejercicio 5 - 8
  PADSTR(InfoEmprev."VAT Registration No.", 9, ' ') + //NIF Declarante 9 - 17
- PADSTR("INDRA Witholding Tax registers"."Cif/Nif", 9, ' ') + //NIF del perceptor 18 - 26
+ PADSTR("INDRA Witholding Tax registers"."CIF/NIF", 9, ' ') + //NIF del perceptor 18 - 26
  PADSTR('', 9, ' ') + //NIF del representante legal 27 - 35
                       //++TEC 001
                       //PADSTR(Ascii2Ansi("Nombre 1"),40,' ') +                   //Apell. y Nombre o denominación del percepto 36 - 75
@@ -222,7 +225,7 @@ PADSTR("Código provincia", 2, ' ') + //Código provincia 76 - 77
                 //FichModelo190.WRITE(TextoSalida);
                 //**TempFile.WRITE(TextoSalida);
                 //***
-                Outstr.WRITETEXT;
+                Outstr.WRITETEXT();
                 Outstr.WRITETEXT(TextoSalida);
                 //***
                 BaseRetencion := 0;
@@ -258,7 +261,7 @@ PADSTR("Código provincia", 2, ' ') + //Código provincia 76 - 77
                         var
                             FileMgt: codeunit "File Management";
                         begin
-                            IF FileName = '' THEN
+                            if FileName = '' then
                                 FileName := '.txt';
                             FileName := FileMgt.SaveFileDialog(Text003, FileName, '');
                         end;
@@ -272,14 +275,14 @@ PADSTR("Código provincia", 2, ' ') + //Código provincia 76 - 77
 
                     trigger OnValidate()
                     begin
-                        IF Complementaria THEN Sustitutiva := FALSE;
-                        IF Complementaria OR Sustitutiva THEN BEGIN
-                            DecAntEditable := TRUE;
-                        END
-                        ELSE BEGIN
-                            DecAntEditable := FALSE;
+                        if Complementaria then Sustitutiva := false;
+                        if Complementaria OR Sustitutiva then begin
+                            DecAntEditable := true;
+                        end
+                        else begin
+                            DecAntEditable := false;
                             NDeclAnt := '';
-                        END;
+                        end;
                     end;
                 }
                 field(NDeclAnt; NDeclAnt)
@@ -310,7 +313,7 @@ PADSTR("Código provincia", 2, ' ') + //Código provincia 76 - 77
         //UltimoMov := 2;
         //--TEC 001
         //++TEC 001
-        IF STRLEN(NDecl) < 13 THEN ERROR(Text004);
+        if STRLEN(NDecl) < 13 then ERROR(Text004);
         //--TEC 001
         FileName := 'Modelo190_' + format(CurrentDateTime) + '.txt';
     end;
@@ -334,10 +337,6 @@ PADSTR("Código provincia", 2, ' ') + //Código provincia 76 - 77
         ImporteReten: Decimal;
         NoRegIgual0: Integer;
         BaseRetenIgualCero: Decimal;
-        TBanco: Record 270;
-        CodeBanco: Code[20];
-        FBanco: Page "Bank Account List";
-        NombreBanco: Text[30];
         PersonaContacto: Text[100];
         TelefonoContacto: Text[10];
         NDecl: Code[13];
@@ -392,61 +391,61 @@ PADSTR("Código provincia", 2, ' ') + //Código provincia 76 - 77
         Parte5: Text[30];
         Parte6: Text[30];
     begin
-        Parte1 := PADSTR('', 2 - STRLEN(FORMAT(WORKDATE, 0, '<day>')), '0') + FORMAT(WORKDATE, 0, '<day>');
-        Parte2 := PADSTR('', 2 - STRLEN(FORMAT(WORKDATE, 0, '<month>')), '0') + FORMAT(WORKDATE, 0, '<month>');
-        Parte3 := PADSTR('', 2 - STRLEN(FORMAT(WORKDATE, 0, '<year>')), '0') + FORMAT(WORKDATE, 0, '<year>');
+        Parte1 := PADSTR('', 2 - STRLEN(FORMAT(WorkDate(), 0, '<day>')), '0') + FORMAT(WorkDate(), 0, '<day>');
+        Parte2 := PADSTR('', 2 - STRLEN(FORMAT(WorkDate(), 0, '<month>')), '0') + FORMAT(WorkDate(), 0, '<month>');
+        Parte3 := PADSTR('', 2 - STRLEN(FORMAT(WorkDate(), 0, '<year>')), '0') + FORMAT(WorkDate(), 0, '<year>');
         Parte4 := COPYSTR(FORMAT(TIME), 1, 2);
         Parte5 := COPYSTR(FORMAT(TIME), 4, 2);
         Parte6 := COPYSTR(FORMAT(TIME), 7, 2);
-        EXIT(Parte1 + Parte2 + Parte3 + Parte4 + Parte5 + Parte6);
+        exit(Parte1 + Parte2 + Parte3 + Parte4 + Parte5 + Parte6);
     end;
 
     procedure AjustaNum(Num: Decimal; LongENT: Integer; LongDEC: Integer): text[30]
     var
         Numv: text[30];
     begin
-        //IF Num >= 0 THEN Signov  := '+';
-        //IF Num < 0  THEN Signov  := 'N';
-        Num := ROUND(ABS(Num), 1 / POWER(10, LongDEC));
-        IF Num = 0 THEN
+        //if Num >= 0 then Signov  := '+';
+        //if Num < 0  then Signov  := 'N';
+        Num := round(ABS(Num), 1 / POWER(10, LongDEC));
+        if Num = 0 then
             Numv := PADSTR('', LongDEC + 1, '0')
-        ELSE
+        else
             Numv := FORMAT(Num * POWER(10, LongDEC));
         Numv := DELCHR(Numv, '=', '.');
         //Numv := COPYSTR(Numv,1,STRLEN(Numv) - LongDEC) + {',' + }COPYSTR(Numv,STRLEN(Numv) - LongDEC + 1,LongDEC);
         //WHILE STRLEN(Numv) < (LongENT-1) DO
         WHILE STRLEN(Numv) < (LongENT) DO Numv := '0' + Numv;
         //Numv := Signov + Numv;
-        EXIT(Numv);
+        exit(Numv);
     end;
 
     procedure CuentaTotales()
     var
-        MovRetencion: record "IND Witholding Tax registers";
+        MovRetencion: record "EXC Retention Tax registers";
     begin
         Cuenta := 0;
         BaseReten := 0;
         ImporteReten := 0;
-        MovRetencion.RESET;
+        MovRetencion.Reset();
         MovRetencion.COPYFILTERS("INDRA Witholding Tax registers");
-        IF MovRetencion.FINDFIRST THEN
-            REPEAT
+        if MovRetencion.FindFIRST() then
+            repeat
                 Cuenta += 1;
                 BaseReten += MovRetencion."Base retención";
                 ImporteReten += MovRetencion."Importe retención";
-            UNTIL MovRetencion.NEXT = 0;
+            until MovRetencion.Next() = 0;
     end;
 
     procedure Ansi2Ascii(_Text: text[300]): text[300]
     begin
-        MakeVars;
-        EXIT(CONVERTSTR(_Text, AnsiStr, AsciiStr));
+        MakeVars();
+        exit(CONVERTSTR(_Text, AnsiStr, AsciiStr));
     end;
 
     procedure Ascii2Ansi(_Text: text[250]): text[250]
     begin
-        MakeVars;
-        EXIT(CONVERTSTR(_Text, AsciiStr, AnsiStr));
+        MakeVars();
+        exit(CONVERTSTR(_Text, AsciiStr, AnsiStr));
     end;
 
     procedure MakeVars()
@@ -550,52 +549,52 @@ PADSTR("Código provincia", 2, ' ') + //Código provincia 76 - 77
         cinicial := cinicial + FORMAT(cfg, 1, '<char>');
         cinicial := cinicial + FORMAT(cfg14, 1, '<char>');
         cfinal := 'ÁÉÍÓÚáéíóúñÑªº´';
-        EXIT(CONVERTSTR(Valor, cinicial, cfinal));
+        exit(CONVERTSTR(Valor, cinicial, cfinal));
     end;
 
     procedure ComprobarCIF(pCif: Text[20])
     var
-        MovRetencion2: record "IND Witholding Tax registers";
+        MovRetencion2: record "EXC Retention Tax registers";
     begin
         //++TEC 001 - Código nuevo
         UltimoMov := UltimoMov + 1;
-        MovRetencion2.RESET;
-        MovRetencion2.SETCURRENTKEY(MovRetencion2."Cif/Nif");
+        MovRetencion2.Reset();
+        MovRetencion2.Setcurrentkey(MovRetencion2."CIF/NIF");
         //++ OT2-055483
         MovRetencion2.CopyFilters("INDRA Witholding Tax registers");
-        MovRetencion2.SetRange("Cif/Nif", pCif);
+        MovRetencion2.Setrange("CIF/NIF", pCif);
         //-- OT2-055483
-        MovRetencion2.SETRANGE("Nº mov.", "INDRA Witholding Tax registers"."Nº mov.");
-        MovRetencion2.SETRANGE(MovRetencion2."Fecha registro", FechaIni, FechaFin);
+        MovRetencion2.Setrange("Entry No.", "INDRA Witholding Tax registers"."Entry No.");
+        MovRetencion2.Setrange(MovRetencion2."Fecha registro", FechaIni, FechaFin);
         MovRetencion2.SETFILTER(País, '%1', InfoEmprev."Country/Region Code");
-        IF MovRetencion2.FIND('-') THEN BEGIN
-            MovRetencion2.SETRANGE("Nº mov.");
-            IF MovRetencion2.NEXT(+1) <> 0 THEN
-                SiguienteCIF := MovRetencion2."Cif/Nif"
-            ELSE
+        if MovRetencion2.Find('-') then begin
+            MovRetencion2.Setrange("Entry No.");
+            if MovRetencion2.Next(+1) <> 0 then
+                SiguienteCIF := MovRetencion2."CIF/NIF"
+            else
                 SiguienteCIF := '';
-        END
-        ELSE
+        end
+        else
             SiguienteCIF := '';
         UltimoCif := pCif;
-        IF UltimoCif = SiguienteCIF THEN
-            Encontrado := TRUE
-        ELSE
-            Encontrado := FALSE;
+        if UltimoCif = SiguienteCIF then
+            Encontrado := true
+        else
+            Encontrado := false;
         //--TEC 001
         //++TEC 001
         /*Código antiguo
-            MovRetencion2.RESET;
-                    MovRetencion2.SETRANGE("Nº mov.", UltimoMov);
-                    IF MovRetencion2.FIND('-') THEN
+            MovRetencion2.Reset;
+                    MovRetencion2.Setrange("Nº mov.", UltimoMov);
+                    if MovRetencion2.Find('-') then
                         SiguienteCIF := MovRetencion2."Cif/Nif";
 
                     UltimoCif := pCif;
 
-                    IF UltimoCif = SiguienteCIF THEN
-                        Encontrado := TRUE
-                    ELSE
-                        Encontrado := FALSE;
+                    if UltimoCif = SiguienteCIF then
+                        Encontrado := true
+                    else
+                        Encontrado := false;
 
                     UltimoMov := MovRetencion2."Nº mov." + 1;
 
@@ -608,20 +607,20 @@ PADSTR("Código provincia", 2, ' ') + //Código provincia 76 - 77
         Tempstring: text;
         Tempstring1: text[1];
     begin
-        CLEAR(Result);
+        clear(Result);
         //++ OT2-055483
         //TempString := CONVERTSTR(UPPERCASE(NameString), SpanishSpecialCharactersTxt, 'AAEEEIIOOUUUÐUÃ     AEIOOOU    ');
         TempString := CONVERTSTR(UPPERCASE(NameString), SpanishSpecialCharactersTxt, 'AAEEEIIOOUUUÐUÃ     AEIOOOU    NnAaEeIiOoUuUu');
         //-- OT2-055483
-        IF STRLEN(TempString) > 0 THEN
-            REPEAT
+        if STRLEN(TempString) > 0 then
+            repeat
                 TempString1 := COPYSTR(TempString, 1, 1);
                 //++ OT2-055483
-                //IF TempString1 IN ['A' .. 'Z', '0' .. '9', 'Ñ', 'Ç', ' ', '-'] THEN
-                IF TempString1 IN ['A' .. 'Z', '0' .. '9', 'Ç', ' ', '-'] THEN //-- OT2-055483
+                //if TempString1 IN ['A' .. 'Z', '0' .. '9', 'Ñ', 'Ç', ' ', '-'] then
+                if TempString1 IN ['A' .. 'Z', '0' .. '9', 'Ç', ' ', '-'] then //-- OT2-055483
                     Result := Result + TempString1;
                 TempString := DELSTR(TempString, 1, 1);
-            UNTIL STRLEN(TempString) = 0;
-        EXIT(Result);
+            until STRLEN(TempString) = 0;
+        exit(Result);
     end;
 }

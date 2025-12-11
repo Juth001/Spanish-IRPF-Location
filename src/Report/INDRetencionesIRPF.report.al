@@ -1,4 +1,4 @@
-namespace ScriptumVita.IRPF;
+namespace Excelia.IRPF;
 report 86306 "IND Retenciones IRPF"
 {
     // version INDRA
@@ -9,9 +9,9 @@ report 86306 "IND Retenciones IRPF"
 
     dataset
     {
-        dataitem("Witholding Tax registers"; "IND Witholding Tax registers")
+        dataitem("Witholding Tax registers"; "EXC Retention Tax registers")
         {
-            RequestFilterFields = "Clave de Percepción", "Clave IRPF", "Subclave IRPF", "Cif/Nif", "Fecha registro";
+            RequestFilterFields = "Clave de Percepción", "Clave IRPF", "Subclave IRPF", "CIF/NIF", "Fecha registro";
 
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {
@@ -34,7 +34,7 @@ report 86306 "IND Retenciones IRPF"
             column(Witholding_Tax_registers__Subclave_IRPF_; "Subclave IRPF")
             {
             }
-            column(Witholding_Tax_registers__Cif_Nif_; "Cif/Nif")
+            column(Witholding_Tax_registers__Cif_Nif_; "CIF/NIF")
             {
             }
             column(Witholding_Tax_registers__N__documento_; "Nº documento")
@@ -46,7 +46,7 @@ report 86306 "IND Retenciones IRPF"
             column(ProvT_Name; ProvT.Name)
             {
             }
-            column(Witholding_Tax_registers__Cif_Nif__Control1000000003; "Cif/Nif")
+            column(Witholding_Tax_registers__Cif_Nif__Control1000000003; "CIF/NIF")
             {
             }
             column(Witholding_Tax_registers__Fecha_registro_; "Fecha registro")
@@ -61,10 +61,10 @@ report 86306 "IND Retenciones IRPF"
             column(Witholding_Tax_registers__Importe_retención__DL__; "Importe retención (DL)")
             {
             }
-            column(TotalFor___FIELDCAPTION__Cif_Nif__; TotalFor + FIELDCAPTION("Cif/Nif"))
+            column(TotalFor___FIELDCAPTION__Cif_Nif__; TotalFor + FIELDCAPTION("CIF/NIF"))
             {
             }
-            column(Witholding_Tax_registers__Cif_Nif__Control1100292012; "Cif/Nif")
+            column(Witholding_Tax_registers__Cif_Nif__Control1100292012; "CIF/NIF")
             {
             }
             column(Witholding_Tax_registers__Base_retencion__DL___Control1100292014; "Base retencion (DL)")
@@ -193,7 +193,7 @@ report 86306 "IND Retenciones IRPF"
             column(Witholding_Tax_registers__Subclave_IRPF_Caption; FIELDCAPTION("Subclave IRPF"))
             {
             }
-            column(Witholding_Tax_registers__Cif_Nif_Caption; FIELDCAPTION("Cif/Nif"))
+            column(Witholding_Tax_registers__Cif_Nif_Caption; FIELDCAPTION("CIF/NIF"))
             {
             }
             column(Invoice_No_Caption_Control1100292027; Invoice_No_Caption_Control1100292027Lbl)
@@ -220,7 +220,7 @@ report 86306 "IND Retenciones IRPF"
             column(Deduction_Amount__LCY_Caption_Control1100292034; Deduction_Amount__LCY_Caption_Control1100292034Lbl)
             {
             }
-            column(Witholding_Tax_registers_N__mov_; "Nº mov.")
+            column(Witholding_Tax_registers_N__mov_; "Entry No.")
             {
             }
             column(Clave_IRPF; "Witholding Tax registers"."Report Sorting 1")
@@ -236,74 +236,74 @@ report 86306 "IND Retenciones IRPF"
             var
                 myInt: Integer;
             begin
-                IF Mostrartotporclave THEN BEGIN
-                    SETCURRENTKEY("Clave IRPF", "Subclave IRPF", "Cif/Nif", "Fecha registro")
-                END
-                ELSE BEGIN
-                    IF Mostrartotporsubclave THEN
-                        SETCURRENTKEY("Subclave IRPF", "Cif/Nif", "Fecha registro")
-                    ELSE BEGIN
-                        IF Mostrartotporcif THEN
-                            SETCURRENTKEY("Cif/Nif")
-                        ELSE
-                            SETCURRENTKEY("Clave IRPF", "Subclave IRPF", "Cif/Nif", "Fecha registro")
-                    END;
-                END;
-                IF SoloPendiente THEN SETRANGE(Pendiente, TRUE);
+                if Mostrartotporclave then begin
+                    Setcurrentkey("Clave IRPF", "Subclave IRPF", "CIF/NIF", "Fecha registro")
+                end
+                else begin
+                    if Mostrartotporsubclave then
+                        Setcurrentkey("Subclave IRPF", "CIF/NIF", "Fecha registro")
+                    else begin
+                        if Mostrartotporcif then
+                            Setcurrentkey("CIF/NIF")
+                        else
+                            Setcurrentkey("Clave IRPF", "Subclave IRPF", "CIF/NIF", "Fecha registro")
+                    end;
+                end;
+                if SoloPendiente then Setrange(Pendiente, true);
                 //Damos valor a los nuevos campos para agrupar el informe
-                MovReten.RESET;
+                MovReten.Reset();
                 MovReten.COPYFILTERS("Witholding Tax registers");
-                IF MovReten.FINDFIRST THEN
-                    REPEAT
-                        IF Mostrartotporclave THEN
+                if MovReten.FindFIRST() then
+                    repeat
+                        if Mostrartotporclave then
                             MovReten."Report Sorting 1" := FORMAT(MovReten."Clave IRPF")
-                        ELSE
+                        else
                             MovReten."Report Sorting 1" := '';
-                        IF Mostrartotporsubclave THEN
+                        if Mostrartotporsubclave then
                             MovReten."Report Sorting 2" := FORMAT(MovReten."Subclave IRPF")
-                        ELSE
+                        else
                             MovReten."Report Sorting 2" := '';
-                        IF Mostrartotporcif THEN
-                            MovReten."Report Sorting 3" := FORMAT(MovReten."Cif/Nif")
-                        ELSE
+                        if Mostrartotporcif then
+                            MovReten."Report Sorting 3" := FORMAT(MovReten."CIF/NIF")
+                        else
                             MovReten."Report Sorting 3" := '';
-                        MovReten.MODIFY;
-                    UNTIL MovReten.NEXT = 0;
-            END;
+                        MovReten.Modify();
+                    until MovReten.Next() = 0;
+            end;
 
             trigger OnAfterGetRecord()
             var
                 myInt: Integer;
             begin
-                IF NOT ProvT.GET("Witholding Tax registers"."Nº Proveedor / Nº Cliente") THEN BEGIN
-                    ProvT.INIT;
-                END;
+                if NOT ProvT.Get("Witholding Tax registers"."Nº Proveedor / Nº Cliente") then begin
+                    ProvT.INIT();
+                end;
                 //Control Subtotales
-                IF Mostrartotporclave THEN BEGIN
-                    IF "Clave IRPF" <> ClaveActual THEN BEGIN
+                if Mostrartotporclave then begin
+                    if "Clave IRPF" <> ClaveActual then begin
                         ContLineas := 0;
                         ContProvs := 0;
                         CifNifAnt := 'XXInitValueXX';
-                    END;
-                END;
-                CifActual := "Witholding Tax registers"."Cif/Nif";
+                    end;
+                end;
+                CifActual := "Witholding Tax registers"."CIF/NIF";
                 SubClaveActual := "Witholding Tax registers"."Subclave IRPF";
                 ClaveActual := "Witholding Tax registers"."Clave IRPF";
                 //Contamos los registros.
                 ContLineas := ContLineas + 1;
                 ContLineasTotal := ContLineasTotal + 1;
-                IF CifNifAnt <> "Cif/Nif" THEN BEGIN
+                if CifNifAnt <> "CIF/NIF" then begin
                     ContProvs := ContProvs + 1;
                     //ContProvsTotal := ContProvsTotal + 1;
-                END;
-                CifNifAnt := "Cif/Nif";
+                end;
+                CifNifAnt := "CIF/NIF";
                 //Control total CIF
-                TempCifs.RESET;
-                IF NOT TempCifs.GET("Cif/Nif") THEN BEGIN
-                    TempCifs."No." := "Cif/Nif";
-                    TempCifs.INSERT;
+                TempCifs.Reset();
+                if NOT TempCifs.Get("CIF/NIF") then begin
+                    TempCifs."No." := "CIF/NIF";
+                    TempCifs.Insert();
                     ContProvsTotal += 1;
-                END;
+                end;
             end;
         }
     }
@@ -408,7 +408,7 @@ report 86306 "IND Retenciones IRPF"
         Deduction_Base__LCY_Caption_Control1100292032Lbl: Label 'Base retención (DL)';
         DeductionCaption_Control1100292033Lbl: Label '% retención';
         Deduction_Amount__LCY_Caption_Control1100292034Lbl: Label 'Importe retención (DL)';
-        MovReten: Record "IND Witholding Tax registers";
+        MovReten: Record "EXC Retention Tax registers";
         CifActual: Text[20];
         SubClaveActual: option " ","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16";
         ClaveActual: option " ","A","B","C","D","E","F","G","H","I","J","K","L",,,,,,"19";

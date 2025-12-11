@@ -1,7 +1,6 @@
 namespace Excelia.IRPF;
-using Microsoft.Sales.History;
-
-tableextension 86320 "Sales Shipment Header_IRPF" extends "Sales Shipment Header"
+using Microsoft.Purchases.History;
+tableextension 86311 "Purch. RcptHeader" extends "Purch. Rcpt. Header"
 {
     fields
     {
@@ -14,7 +13,7 @@ tableextension 86320 "Sales Shipment Header_IRPF" extends "Sales Shipment Header
         field(86301; "Key Perception"; code[10])
         {
             DataClassification = CustomerContent;
-            TableRelation = "EXC Perception Keys".Code WHERE("Cust/Vend" = const(Customer));
+            TableRelation = "EXC Perception Keys".Code WHERE("Cust/Vend" = const(Vendor));
             Caption = 'Key Perception';
         }
     }

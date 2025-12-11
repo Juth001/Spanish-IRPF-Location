@@ -8456,7 +8456,7 @@
                   <TablixMembers>
                     <TablixMember>
                       <Visibility>
-                        <Hidden>=iif(Fields!Mostrartotporclave.Value= FALSE,TRUE,FALSE)</Hidden>
+                        <Hidden>=iif(Fields!Mostrartotporclave.Value= false,true,false)</Hidden>
                       </Visibility>
                       <KeepWithGroup>After</KeepWithGroup>
                       <KeepTogether>true</KeepTogether>
@@ -8470,7 +8470,7 @@
                       <TablixMembers>
                         <TablixMember>
                           <Visibility>
-                            <Hidden>=iif(Fields!Mostrartotporsubclave.Value= FALSE,TRUE,FALSE)</Hidden>
+                            <Hidden>=iif(Fields!Mostrartotporsubclave.Value= false,true,false)</Hidden>
                           </Visibility>
                           <KeepWithGroup>After</KeepWithGroup>
                           <KeepTogether>true</KeepTogether>
@@ -8484,14 +8484,14 @@
                           <TablixMembers>
                             <TablixMember>
                               <Visibility>
-                                <Hidden>=iif(Fields!Mostrartotporcif.Value=FALSE,TRUE,FALSE)</Hidden>
+                                <Hidden>=iif(Fields!Mostrartotporcif.Value=false,true,false)</Hidden>
                               </Visibility>
                               <KeepWithGroup>After</KeepWithGroup>
                               <KeepTogether>true</KeepTogether>
                             </TablixMember>
                             <TablixMember>
                               <Visibility>
-                                <Hidden>=iif(Fields!Mostrartotporcif.Value=FALSE,TRUE,FALSE)</Hidden>
+                                <Hidden>=iif(Fields!Mostrartotporcif.Value=false,true,false)</Hidden>
                               </Visibility>
                               <KeepWithGroup>After</KeepWithGroup>
                               <KeepTogether>true</KeepTogether>
@@ -8509,7 +8509,7 @@
                             </TablixMember>
                             <TablixMember>
                               <Visibility>
-                                <Hidden>=iif(Fields!Mostrartotporcif.Value=FALSE,TRUE,FALSE)</Hidden>
+                                <Hidden>=iif(Fields!Mostrartotporcif.Value=false,true,false)</Hidden>
                               </Visibility>
                               <KeepWithGroup>Before</KeepWithGroup>
                               <KeepTogether>true</KeepTogether>
@@ -8518,7 +8518,7 @@
                         </TablixMember>
                         <TablixMember>
                           <Visibility>
-                            <Hidden>=iif(Fields!Mostrartotporsubclave.Value= FALSE,TRUE,FALSE)</Hidden>
+                            <Hidden>=iif(Fields!Mostrartotporsubclave.Value= false,true,false)</Hidden>
                           </Visibility>
                           <KeepWithGroup>Before</KeepWithGroup>
                           <KeepTogether>true</KeepTogether>
@@ -8527,21 +8527,21 @@
                     </TablixMember>
                     <TablixMember>
                       <Visibility>
-                        <Hidden>=iif(Fields!Mostrartotporclave.Value= FALSE,TRUE,FALSE)</Hidden>
+                        <Hidden>=iif(Fields!Mostrartotporclave.Value= false,true,false)</Hidden>
                       </Visibility>
                       <KeepWithGroup>Before</KeepWithGroup>
                       <KeepTogether>true</KeepTogether>
                     </TablixMember>
                     <TablixMember>
                       <Visibility>
-                        <Hidden>=iif(Fields!Mostrartotporclave.Value= FALSE,TRUE,FALSE)</Hidden>
+                        <Hidden>=iif(Fields!Mostrartotporclave.Value= false,true,false)</Hidden>
                       </Visibility>
                       <KeepWithGroup>Before</KeepWithGroup>
                       <KeepTogether>true</KeepTogether>
                     </TablixMember>
                     <TablixMember>
                       <Visibility>
-                        <Hidden>=iif(Fields!Mostrartotporclave.Value= FALSE,TRUE,FALSE)</Hidden>
+                        <Hidden>=iif(Fields!Mostrartotporclave.Value= false,true,false)</Hidden>
                       </Visibility>
                       <KeepWithGroup>Before</KeepWithGroup>
                       <KeepTogether>true</KeepTogether>
@@ -8968,35 +8968,35 @@
         Return ""
     end if
     Return Value
-End Function
+end Function
 
 Public Function BlankPos(ByVal Value As Decimal)
     if Value &gt; 0 then
         Return ""
     end if
     Return Value
-End Function
+end Function
 
 Public Function BlankZeroAndPos(ByVal Value As Decimal)
     if Value &gt;= 0 then
         Return ""
     end if
     Return Value
-End Function
+end Function
 
 Public Function BlankNeg(ByVal Value As Decimal)
     if Value &lt; 0 then
         Return ""
     end if
     Return Value
-End Function
+end Function
 
 Public Function BlankNegAndZero(ByVal Value As Decimal)
     if Value &lt;= 0 then
         Return ""
     end if
     Return Value
-End Function
+end Function
 </Code>
   <Language>=User!Language</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>

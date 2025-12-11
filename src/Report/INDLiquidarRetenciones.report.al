@@ -1,672 +1,663 @@
-namespace ScriptumVita.IRPF;
-report 86302 "IND Liquidar Retenciones"
-{
-    // version INDRA
-    UsageCategory = ReportsAndAnalysis;
-    ApplicationArea = All;
-    Caption = 'Liquidar Retenciones';
-    ProcessingOnly = true;
+// namespace Excelia.IRPF;
+// using Microsoft.Foundation.NoSeries;
+// report 86302 "IND Liquidar Retenciones"
+// {
+//     // version INDRA
+//     UsageCategory = ReportsAndAnalysis;
+//     ApplicationArea = All;
+//     Caption = 'Liquidar Retenciones';
+//     ProcessingOnly = true;
 
-    dataset
-    {
-        dataitem("Mov. retención"; "IND Witholding Tax registers")
-        {
-            trigger OnPreDataItem()
-            begin
-                //Dataitem para liquidar retenciones sin FACTURA
-                ConfContabilidad.GET;
-                ConfContabilidad.TESTFIELD("Libro retenciones");
-                ConfContabilidad.TESTFIELD("Sección auxiliar retenciones");
-                ConfContabilidad.TESTFIELD("Sección retenciones");
-                CLEAR(Seccionr);
-                Seccionr.RESET;
-                IF Seccionr.GET(ConfContabilidad."Libro retenciones", ConfContabilidad."Sección retenciones") THEN BEGIN
-                    Seccionr.TESTFIELD("No. Series");
-                    Numdocumentov := Numseriesmgt.GetNextNo(Seccionr."No. Series", WORKDATE, FALSE);
-                END;
-                LinDiario.RESET;
-                LinDiario.SETRANGE("Journal Template Name", ConfContabilidad."Libro retenciones");
-                LinDiario.SETRANGE("Journal Batch Name", ConfContabilidad."Sección retenciones");
-                IF LinDiario.FIND('-') THEN LinDiario.DELETEALL;
-                LinDiario.RESET;
-                LinDiario.SETRANGE("Journal Template Name", ConfContabilidad."Libro retenciones");
-                LinDiario.SETRANGE("Journal Batch Name", ConfContabilidad."Sección auxiliar retenciones");
-                IF LinDiario.FIND('-') THEN LinDiario.DELETEALL;
-                CLEAR(bolCabecera);
-                CLEAR(numLinea);
-                SETRANGE(Pendiente, TRUE);
-            end;
+//     dataset
+//     {
+//         dataitem("Mov. retención"; "EXC Retention Tax registers")
+//         {
+//             trigger OnPreDataItem()
+//             begin
+//                 //Dataitem para liquidar retenciones sin FACTURA
+//                 ConfContabilidad.Get();
+//                 ConfContabilidad.Testfield("Retention Journal Template");
+//                 ConfContabilidad.Testfield("Retention Aux. Batch");
+//                 ConfContabilidad.Testfield("Retention Batch");
+//                 clear(Seccionr);
+//                 Seccionr.Reset();
+//                 if Seccionr.Get(ConfContabilidad."Retention Journal Template", ConfContabilidad."Retention Batch") then begin
+//                     Seccionr.Testfield("No. Series");
+//                     Numdocumentov := Numseriesmgt.GetNextNo(Seccionr."No. Series", WorkDate(), false);
+//                 end;
+//                 LinDiario.Reset();
+//                 LinDiario.Setrange("Journal Template Name", ConfContabilidad."Retention Journal Template");
+//                 LinDiario.Setrange("Journal Batch Name", ConfContabilidad."Retention Batch");
+//                 if LinDiario.Find('-') then LinDiario.DeleteAll();
+//                 LinDiario.Reset();
+//                 LinDiario.Setrange("Journal Template Name", ConfContabilidad."Retention Journal Template");
+//                 LinDiario.Setrange("Journal Batch Name", ConfContabilidad."Retention Aux. Batch");
+//                 if LinDiario.Find('-') then LinDiario.DeleteAll();
+//                 clear(bolCabecera);
+//                 clear(numLinea);
+//                 Setrange(Pendiente, true);
+//             end;
 
-            trigger OnAfterGetRecord()
-            begin
-                IF VEfecto THEN BEGIN
-                    IF "Mov. retención"."Cli/Prov" = "Mov. retención"."Cli/Prov"::Cliente THEN BEGIN
-                        IF NOT HistFactVenta.GET("Mov. retención"."Nº documento") THEN IF HistAbonVenta.GET("Mov. retención"."Nº documento") THEN ERROR(TextIbdos002);
-                    END
-                    ELSE BEGIN
-                        IF NOT HistFactCompra.GET("Mov. retención"."Nº documento") THEN IF HistAbonCompra.GET("Mov. retención"."Nº documento") THEN ERROR(TextIbdos002);
-                    END;
-                END;
-                IF "Mov. retención"."Nº documento" <> UltDoc THEN BEGIN
-                    UltDoc := "Mov. retención"."Nº documento";
-                    CLEAR(UltEfectoMismoDoc);
-                END;
-                IF bolFactura THEN
-                    retencionFactura("Mov. retención")
-                ELSE
-                    retencionSinFactura("Mov. retención");
-            end;
+//             trigger OnAfterGetRecord()
+//             begin
+//                 if VEfecto then begin
+//                     if "Mov. retención"."Cust/Vend" = "Mov. retención"."Cust/Vend"::Cliente then begin
+//                         if NOT HistFactVenta.Get("Mov. retención"."Nº documento") then if HistAbonVenta.Get("Mov. retención"."Nº documento") then ERROR(TextIbdos002);
+//                     end
+//                     else begin
+//                         if NOT HistFactCompra.Get("Mov. retención"."Nº documento") then if HistAbonCompra.Get("Mov. retención"."Nº documento") then ERROR(TextIbdos002);
+//                     end;
+//                 end;
+//                 if "Mov. retención"."Nº documento" <> UltDoc then begin
+//                     UltDoc := "Mov. retención"."Nº documento";
+//                     clear(UltEfectoMismoDoc);
+//                 end;
+//                 if bolFactura then
+//                     retencionFactura("Mov. retención")
+//                 else
+//                     retencionSinFactura("Mov. retención");
+//             end;
 
-            trigger OnPostDataItem()
-            begin
-                bolContinuar := TRUE;
-            end;
-        }
-    }
-    requestpage
-    {
-        layout
-        {
-            area(Content)
-            {
-                group("Opciones")
-                {
-                    field(optTipo; Tipo)
-                    {
-                        ApplicationArea = All;
-                        //Enabled = bolFacturapage;
-                        //CaptionML = ESP = 'Liquidar por';
-                        Caption = 'Liquidar por';
+//             trigger OnPostDataItem()
+//             begin
+//                 bolContinuar := true;
+//             end;
+//         }
+//     }
+//     requestpage
+//     {
+//         layout
+//         {
+//             area(Content)
+//             {
+//                 group("Opciones")
+//                 {
+//                     field(optTipo; Tipo)
+//                     {
+//                         ApplicationArea = All;
+//                         //Enabled = bolFacturapage;
+//                         //CaptionML = ESP = 'Liquidar por';
+//                         Caption = 'Liquidar por';
 
-                        trigger OnValidate()
-                        begin
-                            IF Tipo = Tipo::"Cliente/Proveedor" THEN
-                                BoolCuenta := FALSE
-                            ELSE
-                                BoolCuenta := TRUE;
-                            IF NOT bolFacturapage THEN BoolCuenta := FALSE;
-                        end;
-                    }
-                    field(txtCuenta; Cuenta)
-                    {
-                        ApplicationArea = All;
-                        //CaptionML = ESP = 'Cuenta';
-                        Caption = 'Cuenta';
+//                         trigger OnValidate()
+//                         begin
+//                             if Tipo = Tipo::"Cliente/Proveedor" then
+//                                 BoolCuenta := false
+//                             else
+//                                 BoolCuenta := true;
+//                             if NOT bolFacturapage then BoolCuenta := false;
+//                         end;
+//                     }
+//                     field(txtCuenta; Cuenta)
+//                     {
+//                         ApplicationArea = All;
+//                         //CaptionML = ESP = 'Cuenta';
+//                         Caption = 'Cuenta';
 
-                        //Enabled = BoolCuenta;
-                        ;
-                        trigger OnLookup(var txt1: text): Boolean
-                        var
-                            reBanco: Record 270;
-                            frmListaBanco: Page 371;
-                            reCuenta: Record 15;
-                            frmListaCuentas: Page 18;
-                        begin
-                            IF Tipo = Tipo::Banco THEN BEGIN
-                                reBanco.RESET;
-                                CLEAR(frmListaBanco);
-                                frmListaBanco.SETTABLEVIEW(reBanco);
-                                frmListaBanco.LOOKUPMODE := TRUE;
-                                frmListaBanco.SETRECORD(reBanco);
-                                IF frmListaBanco.RUNMODAL = ACTION::LookupOK THEN BEGIN
-                                    frmListaBanco.GETRECORD(reBanco);
-                                    Cuenta := reBanco."No.";
-                                END
-                            END
-                            ELSE BEGIN
-                                reCuenta.RESET;
-                                CLEAR(frmListaCuentas);
-                                frmListaCuentas.SETTABLEVIEW(reCuenta);
-                                frmListaCuentas.LOOKUPMODE := TRUE;
-                                frmListaCuentas.SETRECORD(reCuenta);
-                                IF frmListaCuentas.RUNMODAL = ACTION::LookupOK THEN BEGIN
-                                    frmListaCuentas.GETRECORD(reCuenta);
-                                    Cuenta := reCuenta."No.";
-                                END
-                            END
-                        end;
-                    }
-                    field(chkEfecto; VEfecto)
-                    {
-                        ApplicationArea = All;
-                        //Enabled = bolFacturapage;
-                        //CaptionML = ESP = 'Tipo efecto';
-                        Caption = 'Tipo efecto';
-                    }
-                    field(bolFactura; bolFactura)
-                    {
-                        ApplicationArea = All;
-                        //Enabled = bolFacturapage;
-                        //CaptionML = ESP = 'Tipo efecto';
-                        Caption = 'Factura';
-                    }
-                }
-            }
-        }
-        actions
-        {
-            area(processing)
-            {
-                action(ActionName)
-                {
-                    ApplicationArea = All;
-                }
-            }
-        }
-    }
-    trigger OnInitReport()
-    var
-        myInt: Integer;
-    begin
-        CLEAR(bolContinuar);
-        CLEAR(UltEfectoMismoDoc);
-        CLEAR(UltDoc);
-        bolFacturapage := NOT bolFactura;
-    end;
+//                         //Enabled = BoolCuenta;
+//                         ;
+//                         trigger OnLookup(var txt1: text): Boolean
+//                         var
+//                             reBanco: Record 270;
+//                             frmListaBanco: Page 371;
+//                             reCuenta: Record 15;
+//                             frmListaCuentas: Page 18;
+//                         begin
+//                             if Tipo = Tipo::Banco then begin
+//                                 reBanco.Reset();
+//                                 clear(frmListaBanco);
+//                                 frmListaBanco.SETTABLEVIEW(reBanco);
+//                                 frmListaBanco.LOOKUPMODE := true;
+//                                 frmListaBanco.SETRECORD(reBanco);
+//                                 if frmListaBanco.RUNMODAL() = ACTION::LookupOK then begin
+//                                     frmListaBanco.GETRECORD(reBanco);
+//                                     Cuenta := reBanco."No.";
+//                                 end
+//                             end
+//                             else begin
+//                                 reCuenta.Reset();
+//                                 clear(frmListaCuentas);
+//                                 frmListaCuentas.SETTABLEVIEW(reCuenta);
+//                                 frmListaCuentas.LOOKUPMODE := true;
+//                                 frmListaCuentas.SETRECORD(reCuenta);
+//                                 if frmListaCuentas.RUNMODAL() = ACTION::LookupOK then begin
+//                                     frmListaCuentas.GETRECORD(reCuenta);
+//                                     Cuenta := reCuenta."No.";
+//                                 end
+//                             end
+//                         end;
+//                     }
+//                     field(chkEfecto; VEfecto)
+//                     {
+//                         ApplicationArea = All;
+//                         Caption = 'Tipo efecto';
+//                     }
+//                     field(bolFactura; bolFactura)
+//                     {
+//                         ApplicationArea = All;
+//                         //Enabled = bolFacturapage;
+//                         //CaptionML = ESP = 'Tipo efecto';
+//                         Caption = 'Factura';
+//                     }
+//                 }
+//             }
+//         }
+//         actions
+//         {
+//             area(processing)
+//             {
+//                 action(ActionName)
+//                 {
+//                     ApplicationArea = All;
+//                 }
+//             }
+//         }
+//     }
+//     trigger OnInitReport()
+//     var
+//         myInt: Integer;
+//     begin
+//         clear(bolContinuar);
+//         clear(UltEfectoMismoDoc);
+//         clear(UltDoc);
+//         bolFacturapage := NOT bolFactura;
+//     end;
 
-    trigger OnPostReport()
-    var
-        myInt: Integer;
-    begin
-        Realizaragrupacionporpais;
-        IF NOT NoMuestraDiario THEN
-            IF NOT bolFactura THEN BEGIN
-                ConfContabilidad.GET;
-                COMMIT;
-                GenJnlLine.RESET;
-                GenJnlTemplate.GET(ConfContabilidad."Libro retenciones");
-                GenJnlLine.FILTERGROUP := 2;
-                GenJnlLine.SETRANGE("Journal Template Name", ConfContabilidad."Libro retenciones");
-                GenJnlLine.FILTERGROUP := 0;
-                GenJnlManagement.SetName(ConfContabilidad."Sección retenciones", GenJnlLine);
-                CLEAR(frmDiarioGen);
-                PAGE.RUNMODAL(GenJnlTemplate."Page ID", GenJnlLine);
-            END;
-    end;
+//     trigger OnPostReport()
+//     var
+//         myInt: Integer;
+//     begin
+//         Realizaragrupacionporpais();
+//         if NOT NoMuestraDiario then
+//             if NOT bolFactura then begin
+//                 ConfContabilidad.Get();
+//                 COMMIT();
+//                 GenJnlLine.Reset();
+//                 GenJnlTemplate.Get(ConfContabilidad."Retention Journal Template");
+//                 GenJnlLine.FILTERGROUP := 2;
+//                 GenJnlLine.Setrange("Journal Template Name", ConfContabilidad."Retention Journal Template");
+//                 GenJnlLine.FILTERGROUP := 0;
+//                 GenJnlManagement.SetName(ConfContabilidad."Retention Batch", GenJnlLine);
+//                 clear(frmDiarioGen);
+//                 PAGE.RUNMODAL(GenJnlTemplate."Page ID", GenJnlLine);
+//             end;
+//     end;
 
-    var
-        VEfecto: Boolean;
-        LinDiario: Record 81;
-        NLin: Integer;
-        FormCartera: Page 7000036;
-        CarteraSetupw: Record 7000016;
-        bolFactura: Boolean;
-        bolCabecera: Boolean;
-        numLinea: Integer;
-        NumDocumento: Code[20];
-        TextIbdos001: Label 'debe tener configurada una forma de pago que genere efectos.';
-        Tipo: option "Cliente/Proveedor","Banco","Cuenta";
-        Cuenta: Code[20];
-        bolContinuar: Boolean;
-        UltEfectoMismoDoc: Code[20];
-        UltDoc: Code[20];
-        TipoFactura: Boolean;
-        TextIbdos002: Label 'No se pueden liquidar mov. retención de un Abono con un efecto.';
-        HistFactVenta: Record 112;
-        HistAbonVenta: Record 114;
-        HistFactCompra: Record 122;
-        HistAbonCompra: Record 124;
-        ConfContabilidad: Record 98;
-        Seccionr: Record 232;
-        Numdocumentov: Code[20];
-        Numseriesmgt: Codeunit 396;
-        Noseriesr: Record 309;
-        Numdocumentooldv: Code[20];
-        bolFacturapage: Boolean;
-        BoolCuenta: Boolean;
-        NoMuestraDiario: Boolean;
-        GenJnlLine: Record 81;
-        GenJnlTemplate: Record 80;
-        GenJnlManagement: Codeunit 230;
-        frmDiarioGen: Page 7000036;
+//     var
+//         VEfecto: Boolean;
+//         LinDiario: Record 81;
+//         NLin: Integer;
+//         FormCartera: Page 7000036;
+//         CarteraSetupw: Record 7000016;
+//         bolFactura: Boolean;
+//         bolCabecera: Boolean;
+//         numLinea: Integer;
+//         NumDocumento: Code[20];
+//         TextIbdos001: Label 'debe tener configurada una forma de pago que genere efectos.';
+//         Tipo: option "Cliente/Proveedor","Banco","Cuenta";
+//         Cuenta: Code[20];
+//         bolContinuar: Boolean;
+//         UltEfectoMismoDoc: Code[20];
+//         UltDoc: Code[20];
+//         TipoFactura: Boolean;
+//         TextIbdos002: Label 'No se pueden liquidar mov. retención de un Abono con un efecto.';
+//         HistFactVenta: Record 112;
+//         HistAbonVenta: Record 114;
+//         HistFactCompra: Record 122;
+//         HistAbonCompra: Record 124;
+//         ConfContabilidad: Record 98;
+//         Seccionr: Record 232;
+//         Numdocumentov: Code[20];
+//         Numseriesmgt: Codeunit "No. Series";
+//         bolFacturapage: Boolean;
+//         BoolCuenta: Boolean;
+//         NoMuestraDiario: Boolean;
+//         GenJnlLine: Record 81;
+//         GenJnlTemplate: Record 80;
+//         GenJnlManagement: Codeunit 230;
+//         frmDiarioGen: Page 7000036;
 
-    PROCEDURE UltLinea();
-    BEGIN
-        NLin := 0;
-        LinDiario.LOCKTABLE;
-        LinDiario.RESET;
-        LinDiario.SETRANGE("Journal Template Name", ConfContabilidad."Libro retenciones");
-        LinDiario.SETRANGE("Journal Batch Name", ConfContabilidad."Sección auxiliar retenciones");
-        IF LinDiario.FIND('+') THEN NLin := LinDiario."Line No.";
-    END;
+//     procedure UltLinea();
+//     begin
+//         NLin := 0;
+//         LinDiario.LockTable();
+//         LinDiario.Reset();
+//         LinDiario.Setrange("Journal Template Name", ConfContabilidad."Retention Journal Template");
+//         LinDiario.Setrange("Journal Batch Name", ConfContabilidad."Retention Aux. Batch");
+//         if LinDiario.Find('+') then NLin := LinDiario."Line No.";
+//     end;
 
-    PROCEDURE FormaPago(): Code[10];
-    VAR
-        FPago: Record 289;
-    BEGIN
-        FPago.RESET;
-        FPago.SETRANGE("Create Bills", TRUE);
-        IF FPago.FIND('-') THEN
-            EXIT(FPago.Code)
-        ELSE
-            ERROR(TextIbdos001);
-    END;
+//     procedure FormaPago(): Code[10];
+//     VAR
+//         FPago: Record 289;
+//     begin
+//         FPago.Reset();
+//         FPago.Setrange("Create Bills", true);
+//         if FPago.Find('-') then
+//             exit(FPago.Code)
+//         else
+//             ERROR(TextIbdos001);
+//     end;
 
-    PROCEDURE GeneraFactura(pBolFactura: Boolean);
-    BEGIN
-        bolFactura := pBolFactura;
-        //GFM - Comentado: le doy valor en OnInitReport
-        //bolFacturapage := NOT pBolFactura;
-    END;
+//     procedure CreateInvoice(pBolFactura: Boolean);
+//     begin
+//         bolFactura := pBolFactura;
+//     end;
 
-    PROCEDURE CreaFacturaVT(pReRetencion: Record "IND Witholding Tax registers");
-    VAR
-        reFacVTCb: Record 36;
-        reFacVTLin: Record 37;
-    BEGIN
-        //Cabecera
-        IF NOT bolCabecera THEN BEGIN
-            reFacVTCb.RESET;
-            reFacVTCb.INIT;
-            reFacVTCb."Document Type" := reFacVTCb."Document Type"::Invoice;
-            reFacVTCb."No." := '';
-            reFacVTCb.INSERT(TRUE);
-            reFacVTCb.VALIDATE("Sell-to Customer No.", pReRetencion."Nº Proveedor / Nº Cliente");
-            reFacVTCb."Tipo Percepción" := pReRetencion."Tipo de Perceptor";
-            reFacVTCb."Clave Percepción" := pReRetencion."Clave de Percepción";
-            reFacVTCb.VALIDATE("Shortcut Dimension 2 Code", "Mov. retención"."Nº Proyecto");
-            reFacVTCb.MODIFY;
-            bolCabecera := TRUE;
-            NumDocumento := reFacVTCb."No.";
-        END;
-        //Lineas
-        reFacVTLin.RESET;
-        reFacVTLin.INIT;
-        reFacVTLin."Document Type" := reFacVTLin."Document Type"::Invoice;
-        reFacVTLin."Document No." := NumDocumento;
-        numLinea += 10000;
-        reFacVTLin."Line No." := numLinea;
-        reFacVTLin.INSERT(TRUE);
-        reFacVTLin.Type := reFacVTLin.Type::"G/L Account";
-        reFacVTLin.VALIDATE("No.", pReRetencion."Cta. retención");
-        reFacVTLin.VALIDATE(Quantity, 1);
-        reFacVTLin.VALIDATE("Unit Price", pReRetencion."Importe a Liquidar");
-        reFacVTLin."Tipo Percepción" := pReRetencion."Tipo de Perceptor";
-        reFacVTLin."Clave Percepción" := pReRetencion."Clave de Percepción";
-        reFacVTLin."Lín. retención" := TRUE;
-        reFacVTLin."Mov. retención" := pReRetencion."Nº mov.";
-        reFacVTLin.MODIFY;
-    END;
+//     procedure CreaFacturaVT(pReRetencion: Record "EXC Retention Tax registers");
+//     VAR
+//         reFacVTCb: Record 36;
+//         reFacVTLin: Record 37;
+//     begin
+//         //Cabecera
+//         if NOT bolCabecera then begin
+//             reFacVTCb.Reset();
+//             reFacVTCb.INIT();
+//             reFacVTCb."Document Type" := reFacVTCb."Document Type"::Invoice;
+//             reFacVTCb."No." := '';
+//             reFacVTCb.Insert(true);
+//             reFacVTCb.Validate("Sell-to Customer No.", pReRetencion."Nº Proveedor / Nº Cliente");
+//             reFacVTCb."Type Perception" := pReRetencion."Tipo de Perceptor";
+//             reFacVTCb."Key Perception" := pReRetencion."Clave de Percepción";
+//             reFacVTCb.Validate("Shortcut Dimension 2 Code", "Mov. retención"."Nº Proyecto");
+//             reFacVTCb.Modify();
+//             bolCabecera := true;
+//             NumDocumento := reFacVTCb."No.";
+//         end;
+//         //Lineas
+//         reFacVTLin.Reset();
+//         reFacVTLin.INIT();
+//         reFacVTLin."Document Type" := reFacVTLin."Document Type"::Invoice;
+//         reFacVTLin."Document No." := NumDocumento;
+//         numLinea += 10000;
+//         reFacVTLin."Line No." := numLinea;
+//         reFacVTLin.Insert(true);
+//         reFacVTLin.Type := reFacVTLin.Type::"G/L Account";
+//         reFacVTLin.Validate("No.", pReRetencion."Cta. retención");
+//         reFacVTLin.Validate(Quantity, 1);
+//         reFacVTLin.Validate("Unit Price", pReRetencion."Importe a Liquidar");
+//         reFacVTLin."Perception Type" := pReRetencion."Tipo de Perceptor";
+//         reFacVTLin."Perception Key" := pReRetencion."Clave de Percepción";
+//         reFacVTLin."Deduction Line" := true;
+//         reFacVTLin."Deduction Entry" := pReRetencion."Entry No.";
+//         reFacVTLin.Modify();
+//     end;
 
-    PROCEDURE CreaFacturaCP(pReRetencion: Record "IND Witholding Tax registers");
-    VAR
-        reFacCPCb: Record 38;
-        reFacCPLin: Record 39;
-    BEGIN
-        //Cabecera
-        IF NOT bolCabecera THEN BEGIN
-            reFacCPCb.RESET;
-            reFacCPCb.INIT;
-            reFacCPCb."Document Type" := reFacCPCb."Document Type"::Invoice;
-            reFacCPCb."No." := '';
-            reFacCPCb.INSERT(TRUE);
-            reFacCPCb.VALIDATE("Buy-from Vendor No.", pReRetencion."Nº Proveedor / Nº Cliente");
-            reFacCPCb.VALIDATE("Currency Code", pReRetencion."Cód. divisa");
-            reFacCPCb."Tipo Percepción" := pReRetencion."Tipo de Perceptor";
-            reFacCPCb."Clave Percepción" := pReRetencion."Clave de Percepción";
-            reFacCPCb."Vendor Invoice No." := pReRetencion."Nº documento";
-            reFacCPCb.VALIDATE("Shortcut Dimension 2 Code", "Mov. retención"."Nº Proyecto");
-            reFacCPCb.MODIFY;
-            bolCabecera := TRUE;
-            NumDocumento := reFacCPCb."No.";
-        END;
-        //Lineas
-        reFacCPLin.RESET;
-        reFacCPLin.INIT;
-        reFacCPLin."Document Type" := reFacCPLin."Document Type"::Invoice;
-        reFacCPLin."Document No." := NumDocumento;
-        numLinea += 10000;
-        reFacCPLin."Line No." := numLinea;
-        reFacCPLin.INSERT(TRUE);
-        reFacCPLin.Type := reFacCPLin.Type::"G/L Account";
-        reFacCPLin.VALIDATE("No.", pReRetencion."Cta. retención");
-        reFacCPLin.VALIDATE(Quantity, 1);
-        reFacCPLin.VALIDATE("Direct Unit Cost", -pReRetencion."Importe a Liquidar");
-        reFacCPLin."Tipo Percepción" := pReRetencion."Tipo de Perceptor";
-        reFacCPLin."Clave Percepción" := pReRetencion."Clave de Percepción";
-        reFacCPLin."Lín. retención" := TRUE;
-        reFacCPLin.VALIDATE("Mov. retención", pReRetencion."Nº mov.");
-        reFacCPLin.VALIDATE("Shortcut Dimension 2 Code", "Mov. retención"."Nº Proyecto");
-        reFacCPLin.MODIFY;
-    END;
+//     procedure CreaFacturaCP(pReRetencion: Record "EXC Retention Tax registers");
+//     VAR
+//         reFacCPCb: Record 38;
+//         reFacCPLin: Record 39;
+//     begin
+//         //Cabecera
+//         if NOT bolCabecera then begin
+//             reFacCPCb.Reset();
+//             reFacCPCb.INIT();
+//             reFacCPCb."Document Type" := reFacCPCb."Document Type"::Invoice;
+//             reFacCPCb."No." := '';
+//             reFacCPCb.Insert(true);
+//             reFacCPCb.Validate("Buy-from Vendor No.", pReRetencion."Nº Proveedor / Nº Cliente");
+//             reFacCPCb.Validate("Currency Code", pReRetencion."Cód. divisa");
+//             reFacCPCb."Perception Type" := pReRetencion."Tipo de Perceptor";
+//             reFacCPCb."Perception Key" := pReRetencion."Clave de Percepción";
+//             reFacCPCb."Vendor Invoice No." := pReRetencion."Nº documento";
+//             reFacCPCb.Validate("Shortcut Dimension 2 Code", "Mov. retención"."Nº Proyecto");
+//             reFacCPCb.Modify();
+//             bolCabecera := true;
+//             NumDocumento := reFacCPCb."No.";
+//         end;
+//         reFacCPLin.Reset();
+//         reFacCPLin.INIT();
+//         reFacCPLin."Document Type" := reFacCPLin."Document Type"::Invoice;
+//         reFacCPLin."Document No." := NumDocumento;
+//         numLinea += 10000;
+//         reFacCPLin."Line No." := numLinea;
+//         reFacCPLin.Insert(true);
+//         reFacCPLin.Type := reFacCPLin.Type::"G/L Account";
+//         reFacCPLin.Validate("No.", pReRetencion."Cta. retención");
+//         reFacCPLin.Validate(Quantity, 1);
+//         reFacCPLin.Validate("Direct Unit Cost", -pReRetencion."Importe a Liquidar");
+//         reFacCPLin."Perception Type" := pReRetencion."Tipo de Perceptor";
+//         reFacCPLin."Perception key" := pReRetencion."Clave de Percepción";
+//         reFacCPLin."Retention Line" := true;
+//         reFacCPLin.Validate("Retention Entry", pReRetencion."Entry No.");
+//         reFacCPLin.Validate("Shortcut Dimension 2 Code", "Mov. retención"."Nº Proyecto");
+//         reFacCPLin.Modify();
+//     end;
 
-    PROCEDURE retencionFactura(pReRetencion: Record "IND Witholding Tax registers");
-    BEGIN
-        IF pReRetencion."Cli/Prov" = pReRetencion."Cli/Prov"::Cliente THEN
-            CreaFacturaVT(pReRetencion)
-        ELSE
-            CreaFacturaCP(pReRetencion);
-    END;
+//     procedure retencionFactura(pReRetencion: Record "EXC Retention Tax registers");
+//     begin
+//         if pReRetencion."Cust/Vend" = pReRetencion."Cust/Vend"::Cliente then
+//             CreaFacturaVT(pReRetencion)
+//         else
+//             CreaFacturaCP(pReRetencion);
+//     end;
 
-    PROCEDURE retencionSinFactura(pReRetencion: Record "IND Witholding Tax registers");
-    BEGIN
-        UltLinea;
-        IF pReRetencion."Cli/Prov" = pReRetencion."Cli/Prov"::Proveedor THEN
-            TipoFactura := DevuelveTipoDoc(pReRetencion."Nº documento", TRUE)
-        ELSE
-            TipoFactura := DevuelveTipoDoc(pReRetencion."Nº documento", FALSE);
-        // 1º línea.
-        NLin := NLin + 10000;
-        LinDiario.INIT;
-        LinDiario."Journal Template Name" := ConfContabilidad."Libro retenciones";
-        LinDiario."Journal Batch Name" := ConfContabilidad."Sección auxiliar retenciones";
-        LinDiario."Line No." := NLin;
-        //LinDiario.INSERT(TRUE);
-        LinDiario."Posting Date" := WORKDATE;
-        CASE Tipo OF
-            Tipo::"Cliente/Proveedor":
-                BEGIN
-                    IF pReRetencion."Cli/Prov" = pReRetencion."Cli/Prov"::Cliente THEN LinDiario."Account Type" := LinDiario."Account Type"::Customer;
-                    IF pReRetencion."Cli/Prov" = pReRetencion."Cli/Prov"::Proveedor THEN LinDiario."Account Type" := LinDiario."Account Type"::Vendor;
-                    LinDiario.VALIDATE("Account No.", pReRetencion."Nº Proveedor / Nº Cliente");
-                    LinDiario.VALIDATE("Shortcut Dimension 2 Code", "Mov. retención"."Nº Proyecto");
-                END;
-            Tipo::Banco:
-                BEGIN
-                    LinDiario."Account Type" := LinDiario."Account Type"::"Bank Account";
-                    LinDiario.VALIDATE("Account No.", Cuenta);
-                END;
-            Tipo::Cuenta:
-                BEGIN
-                    LinDiario."Account Type" := LinDiario."Account Type"::"G/L Account";
-                    LinDiario.VALIDATE("Account No.", Cuenta);
-                END
-        END;
-        //LinDiario.VALIDATE("Currency Code", "Mov. retención"."Cód. divisa");
-        IF VEfecto THEN LinDiario."Document Type" := LinDiario."Document Type"::Bill;
-        LinDiario."Document No." := pReRetencion."Nº documento";
-        IF VEfecto THEN BEGIN
-            IF UltEfectoMismoDoc <> '' THEN BEGIN
-                UltEfectoMismoDoc := INCSTR(UltEfectoMismoDoc);
-                LinDiario."Bill No." := UltEfectoMismoDoc;
-            END
-            ELSE
-                LinDiario."Bill No." := BuscaUltimoEfecto(pReRetencion."Nº documento", pReRetencion."Cli/Prov", pReRetencion."Nº Proveedor / Nº Cliente");
-            LinDiario.VALIDATE("Payment Method Code", FormaPago);
-        END;
-        IF pReRetencion."Cli/Prov" = pReRetencion."Cli/Prov"::Proveedor THEN BEGIN
-            IF TipoFactura THEN
-                LinDiario.VALIDATE("Credit Amount", ABS(pReRetencion."Importe a Liquidar (DL)"))
-            ELSE
-                LinDiario.VALIDATE("Debit Amount", ABS(pReRetencion."Importe a Liquidar (DL)"));
-        END
-        ELSE BEGIN
-            IF TipoFactura THEN
-                LinDiario.VALIDATE("Debit Amount", ABS(pReRetencion."Importe a Liquidar (DL)"))
-            ELSE
-                LinDiario.VALIDATE("Credit Amount", ABS(pReRetencion."Importe a Liquidar (DL)"))
-        END;
-        LinDiario.VALIDATE(LinDiario."VAT Posting", 0);
-        LinDiario.VALIDATE("Gen. Bus. Posting Group", '');
-        LinDiario.VALIDATE("Gen. Prod. Posting Group", '');
-        LinDiario."Tipo percepción" := pReRetencion."Tipo de Perceptor";
-        LinDiario."Clave percepción" := pReRetencion."Clave de Percepción";
-        LinDiario."Country/Region Code" := pReRetencion.País;
-        //traspaso las 4 dimensiones
-        LinDiario.VALIDATE("Shortcut Dimension 1 Code", pReRetencion."Shortcut Dimension 1 Code");
-        LinDiario.VALIDATE("Shortcut Dimension 2 Code", pReRetencion."Shortcut Dimension 2 Code");
-        //traspaso las 4 dimensiones
-        //-001
-        //LinDiario."Exported to Payment File" := TRUE;
-        LinDiario."Exported to Payment File" := FALSE; //Al generar el diario, obliga a que sea False
-        //+001
-        LinDiario.INSERT;
-        // 2º línea.
-        NLin := NLin + 10000;
-        LinDiario.INIT;
-        LinDiario."Journal Template Name" := ConfContabilidad."Libro retenciones";
-        LinDiario."Journal Batch Name" := ConfContabilidad."Sección auxiliar retenciones";
-        LinDiario."Line No." := NLin;
-        //LinDiario.INSERT(TRUE);
-        LinDiario."Account Type" := LinDiario."Account Type"::"G/L Account";
-        LinDiario.VALIDATE("Account No.", pReRetencion."Cta. retención");
-        LinDiario."Posting Date" := WORKDATE;
-        LinDiario."Document No." := pReRetencion."Nº documento";
-        //LinDiario.VALIDATE("Currency Code", "Mov. retención"."Cód. divisa");
-        IF pReRetencion."Cli/Prov" = pReRetencion."Cli/Prov"::Proveedor THEN BEGIN
-            IF TipoFactura THEN
-                LinDiario.VALIDATE("Debit Amount", ABS(pReRetencion."Importe a Liquidar (DL)"))
-            ELSE
-                LinDiario.VALIDATE("Credit Amount", ABS(pReRetencion."Importe a Liquidar (DL)"));
-        END
-        ELSE BEGIN
-            IF TipoFactura THEN
-                LinDiario.VALIDATE("Credit Amount", ABS(pReRetencion."Importe a Liquidar (DL)"))
-            ELSE
-                LinDiario.VALIDATE("Debit Amount", ABS(pReRetencion."Importe a Liquidar (DL)"))
-        END;
-        LinDiario.VALIDATE("VAT Posting", 0);
-        LinDiario.VALIDATE("Gen. Posting Type", 0);
-        LinDiario.VALIDATE("Gen. Bus. Posting Group", '');
-        LinDiario.VALIDATE("Gen. Prod. Posting Group", '');
-        LinDiario."Nº doc. retención" := pReRetencion."Nº documento";
-        LinDiario."Liq. retención" := TRUE;
-        LinDiario."Tipo percepción" := pReRetencion."Tipo de Perceptor";
-        LinDiario."Clave percepción" := pReRetencion."Clave de Percepción";
-        LinDiario.VALIDATE("Mov. retención", pReRetencion."Nº mov.");
-        //TecnoRet1
-        LinDiario.Factura := LinDiario.Factura::"Sin factura";
-        LinDiario.Efecto := VEfecto;
-        LinDiario."Tipo Liquidacion" := Tipo;
-        //FIN TecnoRet1
-        LinDiario."Country/Region Code" := pReRetencion.País;
-        //TecnoRet3
-        LinDiario."Nº mov. retención" := pReRetencion."Nº mov.";
-        //FIN TecnoRet3
-        //traspaso las 4 dimensiones
-        LinDiario.VALIDATE("Shortcut Dimension 1 Code", pReRetencion."Shortcut Dimension 1 Code");
-        LinDiario.VALIDATE("Shortcut Dimension 2 Code", pReRetencion."Shortcut Dimension 2 Code");
-        //traspaso las 4 dimensiones
-        //-001
-        //LinDiario."Exported to Payment File" := TRUE;
-        LinDiario."Exported to Payment File" := FALSE; //Al generar el diario, obliga a que sea False
-        //+001
-        LinDiario.INSERT;
-    END;
+//     procedure retencionSinFactura(pReRetencion: Record "EXC Retention Tax registers");
+//     begin
+//         UltLinea();
+//         if pReRetencion."Cust/Vend" = pReRetencion."Cust/Vend"::Proveedor then
+//             TipoFactura := DevuelveTipoDoc(pReRetencion."Nº documento", true)
+//         else
+//             TipoFactura := DevuelveTipoDoc(pReRetencion."Nº documento", false);
+//         NLin := NLin + 10000;
+//         LinDiario.INIT();
+//         LinDiario."Journal Template Name" := ConfContabilidad."Retention Journal Template";
+//         LinDiario."Journal Batch Name" := ConfContabilidad."Retention Aux. Batch";
+//         LinDiario."Line No." := NLin;
+//         LinDiario."Posting Date" := WorkDate();
+//         CASE Tipo OF
+//             Tipo::"Cliente/Proveedor":
+//                 begin
+//                     if pReRetencion."Cust/Vend" = pReRetencion."Cust/Vend"::Cliente then LinDiario."Account Type" := LinDiario."Account Type"::Customer;
+//                     if pReRetencion."Cust/Vend" = pReRetencion."Cust/Vend"::Proveedor then LinDiario."Account Type" := LinDiario."Account Type"::Vendor;
+//                     LinDiario.Validate("Account No.", pReRetencion."Nº Proveedor / Nº Cliente");
+//                     LinDiario.Validate("Shortcut Dimension 2 Code", "Mov. retención"."Nº Proyecto");
+//                 end;
+//             Tipo::Banco:
+//                 begin
+//                     LinDiario."Account Type" := LinDiario."Account Type"::"Bank Account";
+//                     LinDiario.Validate("Account No.", Cuenta);
+//                 end;
+//             Tipo::Cuenta:
+//                 begin
+//                     LinDiario."Account Type" := LinDiario."Account Type"::"G/L Account";
+//                     LinDiario.Validate("Account No.", Cuenta);
+//                 end
+//         end;
+//         if VEfecto then LinDiario."Document Type" := LinDiario."Document Type"::Bill;
+//         LinDiario."Document No." := pReRetencion."Nº documento";
+//         if VEfecto then begin
+//             if UltEfectoMismoDoc <> '' then begin
+//                 UltEfectoMismoDoc := INCSTR(UltEfectoMismoDoc);
+//                 LinDiario."Bill No." := UltEfectoMismoDoc;
+//             end
+//             else
+//                 LinDiario."Bill No." := BuscaUltimoEfecto(pReRetencion."Nº documento", pReRetencion."Cust/Vend", pReRetencion."Nº Proveedor / Nº Cliente");
+//             LinDiario.Validate("Payment Method Code", FormaPago());
+//         end;
+//         if pReRetencion."Cust/Vend" = pReRetencion."Cust/Vend"::Proveedor then begin
+//             if TipoFactura then
+//                 LinDiario.Validate("Credit Amount", ABS(pReRetencion."Importe a Liquidar (DL)"))
+//             else
+//                 LinDiario.Validate("Debit Amount", ABS(pReRetencion."Importe a Liquidar (DL)"));
+//         end
+//         else begin
+//             if TipoFactura then
+//                 LinDiario.Validate("Debit Amount", ABS(pReRetencion."Importe a Liquidar (DL)"))
+//             else
+//                 LinDiario.Validate("Credit Amount", ABS(pReRetencion."Importe a Liquidar (DL)"))
+//         end;
+//         LinDiario.Validate(LinDiario."VAT Posting", 0);
+//         LinDiario.Validate("Gen. Bus. Posting Group", '');
+//         LinDiario.Validate("Gen. Prod. Posting Group", '');
+//         LinDiario."Perception Type" := pReRetencion."Tipo de Perceptor";
+//         LinDiario."Perception Key" := pReRetencion."Clave de Percepción";
+//         LinDiario."Country/Region Code" := pReRetencion.País;
+//         //traspaso las 4 dimensiones
+//         LinDiario.Validate("Shortcut Dimension 1 Code", pReRetencion."Shortcut Dimension 1 Code");
+//         LinDiario.Validate("Shortcut Dimension 2 Code", pReRetencion."Shortcut Dimension 2 Code");
+//         //traspaso las 4 dimensiones
+//         //-001
+//         //LinDiario."Exported to Payment File" := true;
+//         LinDiario."Exported to Payment File" := false; //Al generar el diario, obliga a que sea false
+//         //+001
+//         LinDiario.Insert();
+//         // 2º línea.
+//         NLin := NLin + 10000;
+//         LinDiario.INIT();
+//         LinDiario."Journal Template Name" := ConfContabilidad."Retention Journal Template";
+//         LinDiario."Journal Batch Name" := ConfContabilidad."Retention Aux. Batch";
+//         LinDiario."Line No." := NLin;
+//         //LinDiario.Insert(true);
+//         LinDiario."Account Type" := LinDiario."Account Type"::"G/L Account";
+//         LinDiario.Validate("Account No.", pReRetencion."Cta. retención");
+//         LinDiario."Posting Date" := WorkDate();
+//         LinDiario."Document No." := pReRetencion."Nº documento";
+//         //LinDiario.Validate("Currency Code", "Mov. retención"."Cód. divisa");
+//         if pReRetencion."Cust/Vend" = pReRetencion."Cust/Vend"::Proveedor then begin
+//             if TipoFactura then
+//                 LinDiario.Validate("Debit Amount", ABS(pReRetencion."Importe a Liquidar (DL)"))
+//             else
+//                 LinDiario.Validate("Credit Amount", ABS(pReRetencion."Importe a Liquidar (DL)"));
+//         end
+//         else begin
+//             if TipoFactura then
+//                 LinDiario.Validate("Credit Amount", ABS(pReRetencion."Importe a Liquidar (DL)"))
+//             else
+//                 LinDiario.Validate("Debit Amount", ABS(pReRetencion."Importe a Liquidar (DL)"))
+//         end;
+//         LinDiario.Validate("VAT Posting", 0);
+//         LinDiario.Validate("Gen. Posting Type", 0);
+//         LinDiario.Validate("Gen. Bus. Posting Group", '');
+//         LinDiario.Validate("Gen. Prod. Posting Group", '');
+//         LinDiario."Retention Document No." := pReRetencion."Nº documento";
+//         LinDiario."Liq. Retention" := true;
+//         LinDiario."Perception Type" := pReRetencion."Tipo de Perceptor";
+//         LinDiario."Perception Key" := pReRetencion."Clave de Percepción";
+//         LinDiario.Validate("Retention Entry", pReRetencion."Entry No.");
+//         //TecnoRet1
+//         LinDiario.Invoice := LinDiario.Invoice::"Sin factura";
+//         LinDiario.Bill := VEfecto;
+//         LinDiario."Settlement type" := Tipo;
+//         //FIN TecnoRet1
+//         LinDiario."Country/Region Code" := pReRetencion.País;
+//         //TecnoRet3
+//         LinDiario."Nº mov. retención" := pReRetencion."Entry No.";
+//         //FIN TecnoRet3
+//         //traspaso las 4 dimensiones
+//         LinDiario.Validate("Shortcut Dimension 1 Code", pReRetencion."Shortcut Dimension 1 Code");
+//         LinDiario.Validate("Shortcut Dimension 2 Code", pReRetencion."Shortcut Dimension 2 Code");
+//         //traspaso las 4 dimensiones
+//         //-001
+//         //LinDiario."Exported to Payment File" := true;
+//         LinDiario."Exported to Payment File" := false; //Al generar el diario, obliga a que sea false
+//         //+001
+//         LinDiario.Insert();
+//     end;
 
-    PROCEDURE DevuelveDocumento(VAR pChDocumento: Code[20]);
-    BEGIN
-        pChDocumento := NumDocumento;
-    END;
+//     procedure DevuelveDocumento(VAR pChDocumento: Code[20]);
+//     begin
+//         pChDocumento := NumDocumento;
+//     end;
 
-    PROCEDURE Continuar(VAR pBolContinuar: Boolean);
-    BEGIN
-        pBolContinuar := bolContinuar;
-    END;
+//     procedure Continuar(VAR pBolContinuar: Boolean);
+//     begin
+//         pBolContinuar := bolContinuar;
+//     end;
 
-    PROCEDURE BuscaUltimoEfecto(NumDoc: Code[20]; TipoMov: option "Cliente","Proveedor"; CLiProv: Code[20]) NumEfecto: Code[20];
-    VAR
-        MovCliente: Record 21;
-        MovProveedor: Record 25;
-    BEGIN
-        NumEfecto := '1';
-        IF TipoMov = TipoMov::Cliente THEN BEGIN
-            MovCliente.RESET;
-            MovCliente.SETCURRENTKEY("Document No.", "Document Type", "Customer No.");
-            MovCliente.SETRANGE("Document No.", NumDoc);
-            MovCliente.SETRANGE("Document Type", MovProveedor."Document Type"::Bill);
-            MovCliente.SETRANGE("Customer No.", CLiProv);
-            IF MovCliente.FIND('+') THEN NumEfecto := INCSTR(MovCliente."Bill No.");
-        END
-        ELSE BEGIN
-            MovProveedor.RESET;
-            MovProveedor.SETCURRENTKEY("Vendor No.", "Document No.");
-            MovProveedor.SETRANGE("Vendor No.", CLiProv);
-            MovProveedor.SETRANGE("Document No.", NumDoc);
-            MovProveedor.SETRANGE("Document Type", MovProveedor."Document Type"::Bill);
-            IF MovProveedor.FIND('+') THEN NumEfecto := INCSTR(MovProveedor."Bill No.");
-        END;
-        UltEfectoMismoDoc := NumEfecto;
-    END;
+//     procedure BuscaUltimoEfecto(NumDoc: Code[20]; TipoMov: option "Cliente","Proveedor"; CLiProv: Code[20]) NumEfecto: Code[20];
+//     VAR
+//         MovCliente: Record 21;
+//         MovProveedor: Record 25;
+//     begin
+//         NumEfecto := '1';
+//         if TipoMov = TipoMov::Cliente then begin
+//             MovCliente.Reset();
+//             MovCliente.Setcurrentkey("Document No.", "Document Type", "Customer No.");
+//             MovCliente.Setrange("Document No.", NumDoc);
+//             MovCliente.Setrange("Document Type", MovProveedor."Document Type"::Bill);
+//             MovCliente.Setrange("Customer No.", CLiProv);
+//             if MovCliente.Find('+') then NumEfecto := INCSTR(MovCliente."Bill No.");
+//         end
+//         else begin
+//             MovProveedor.Reset();
+//             MovProveedor.Setcurrentkey("Vendor No.", "Document No.");
+//             MovProveedor.Setrange("Vendor No.", CLiProv);
+//             MovProveedor.Setrange("Document No.", NumDoc);
+//             MovProveedor.Setrange("Document Type", MovProveedor."Document Type"::Bill);
+//             if MovProveedor.Find('+') then NumEfecto := INCSTR(MovProveedor."Bill No.");
+//         end;
+//         UltEfectoMismoDoc := NumEfecto;
+//     end;
 
-    PROCEDURE DevuelveTipoDoc(NumDoc: Code[20]; Compra: Boolean) Factura: Boolean;
-    VAR
-        HistFactCompra: Record 122;
-        HistAbonCompra: Record 124;
-        HistFactVenta: Record 112;
-        HistAbonVenta: Record 114;
-    BEGIN
-        IF Compra THEN BEGIN
-            IF HistFactCompra.GET(NumDoc) THEN
-                Factura := TRUE
-            ELSE IF HistAbonCompra.GET(NumDoc) THEN Factura := FALSE;
-        END
-        ELSE BEGIN
-            IF HistFactVenta.GET(NumDoc) THEN
-                Factura := TRUE
-            ELSE IF HistAbonVenta.GET(NumDoc) THEN Factura := FALSE;
-        END;
-    END;
+//     procedure DevuelveTipoDoc(NumDoc: Code[20]; Compra: Boolean) Factura: Boolean;
+//     VAR
+//         HistFactCompra: Record 122;
+//         HistAbonCompra: Record 124;
+//         HistFactVenta: Record 112;
+//         HistAbonVenta: Record 114;
+//     begin
+//         if Compra then begin
+//             if HistFactCompra.Get(NumDoc) then
+//                 Factura := true
+//             else if HistAbonCompra.Get(NumDoc) then Factura := false;
+//         end
+//         else begin
+//             if HistFactVenta.Get(NumDoc) then
+//                 Factura := true
+//             else if HistAbonVenta.Get(NumDoc) then Factura := false;
+//         end;
+//     end;
 
-    PROCEDURE Realizaragrupacionporpais();
-    VAR
-        Companyinfol: Record 79;
-        Lindiariol: Record 81;
-        Imporespañal: Decimal;
-        Imporespañaliql: Decimal;
-        Imporotrosl: Decimal;
-        Imporotrosliql: Decimal;
-        Lindiarioinsertl: Record 81;
-        Liqretencionl: Record "IND Aux. liq mov. retención";
-        Numlineal: Integer;
-        Text001l: Label 'Liquidación retención %1';
-        Text002l: Label 'Liquidación retención países extranjeros.';
-    BEGIN
-        CLEAR(Liqretencionl);
-        Liqretencionl.RESET;
-        Liqretencionl.SETRANGE("Id.usuario", USERID);
-        Liqretencionl.DELETEALL;
-        Imporespañal := 0;
-        Imporespañaliql := 0;
-        Imporotrosl := 0;
-        Imporotrosliql := 0;
-        Numlineal := 10000;
-        Companyinfol.GET;
-        Lindiariol.RESET;
-        Lindiariol.SETRANGE("Journal Template Name", ConfContabilidad."Libro retenciones");
-        Lindiariol.SETRANGE("Journal Batch Name", ConfContabilidad."Sección auxiliar retenciones");
-        Lindiariol.SETRANGE("Country/Region Code", Companyinfol."Country/Region Code");
-        Lindiariol.SETFILTER("Mov. retención", '<>%1', 0);
-        IF Lindiariol.FIND('-') THEN BEGIN
-            REPEAT
-                Imporespañal += Lindiariol.Amount;
-                Liqretencionl."Journal Template Name" := ConfContabilidad."Libro retenciones";
-                Liqretencionl."Journal Batch Name" := ConfContabilidad."Sección retenciones";
-                Liqretencionl."Line No." := Numlineal;
-                Liqretencionl."Mov.retención" := Lindiariol."Mov. retención";
-                Liqretencionl."Importe a liquidar" := Lindiariol.Amount;
-                Liqretencionl."Nº documento" := Lindiariol."Document No.";
-                Liqretencionl."Id.usuario" := USERID;
-                IF Liqretencionl.INSERT THEN;
-            UNTIL Lindiariol.NEXT = 0;
-            Lindiarioinsertl.INIT;
-            Lindiarioinsertl.COPY(Lindiariol);
-            Lindiarioinsertl."Journal Batch Name" := ConfContabilidad."Sección retenciones";
-            Lindiarioinsertl."Line No." := Numlineal;
-            Lindiarioinsertl.INSERT(TRUE);
-            Numlineal += 10000;
-            Lindiarioinsertl.VALIDATE(Amount, Imporespañal);
-            Lindiarioinsertl."Document No." := Numdocumentov;
-            Lindiarioinsertl.Description := STRSUBSTNO(Text001l, Lindiarioinsertl."Country/Region Code");
-            //-001
-            Lindiarioinsertl."Exported to Payment File" := false;
-            Lindiarioinsertl.MODIFY(FALSE);
-            //Lindiarioinsertl.MODIFY(TRUE);
-            //+001
-        END;
-        Lindiariol.SETRANGE("Mov. retención");
-        Lindiariol.SETRANGE("Mov. retención", 0);
-        IF Lindiariol.FIND('-') THEN BEGIN
-            REPEAT
-                Imporespañaliql += Lindiariol.Amount;
-            UNTIL Lindiariol.NEXT = 0;
-            Lindiarioinsertl.INIT;
-            Lindiarioinsertl.COPY(Lindiariol);
-            Lindiarioinsertl."Journal Batch Name" := ConfContabilidad."Sección retenciones";
-            Lindiarioinsertl."Line No." := Numlineal;
-            Lindiarioinsertl.INSERT(TRUE);
-            Numlineal += 10000;
-            Lindiarioinsertl.VALIDATE(Amount, Imporespañaliql);
-            Lindiarioinsertl."Document No." := Numdocumentov;
-            Lindiarioinsertl.Description := STRSUBSTNO(Text001l, Lindiarioinsertl."Country/Region Code");
-            //4 DIM
-            Lindiarioinsertl.VALIDATE("Shortcut Dimension 1 Code", Lindiariol."Shortcut Dimension 1 Code");
-            Lindiarioinsertl.VALIDATE("Shortcut Dimension 2 Code", Lindiariol."Shortcut Dimension 2 Code");
-            //4 DIM
-            //-001
-            Lindiarioinsertl."Exported to Payment File" := false;
-            Lindiarioinsertl.MODIFY(FALSE);
-            //Lindiarioinsertl.MODIFY(TRUE);
-            //+001
-        END;
-        Lindiariol.SETRANGE("Country/Region Code");
-        Lindiariol.SETFILTER("Country/Region Code", '<>%1', Companyinfol."Country/Region Code");
-        Lindiariol.SETRANGE("Mov. retención");
-        Lindiariol.SETFILTER("Mov. retención", '<>%1', 0);
-        IF Lindiariol.FIND('-') THEN BEGIN
-            REPEAT
-                Liqretencionl."Journal Template Name" := ConfContabilidad."Libro retenciones";
-                Liqretencionl."Journal Batch Name" := ConfContabilidad."Sección retenciones";
-                Liqretencionl."Line No." := Numlineal;
-                Liqretencionl."Mov.retención" := Lindiariol."Mov. retención";
-                Liqretencionl."Importe a liquidar" := Lindiariol.Amount;
-                Liqretencionl."Nº documento" := Lindiariol."Document No.";
-                Liqretencionl."Id.usuario" := USERID;
-                IF Liqretencionl.INSERT THEN;
-                Imporotrosl += Lindiariol.Amount;
-            UNTIL Lindiariol.NEXT = 0;
-            Lindiarioinsertl.INIT;
-            Lindiarioinsertl.COPY(Lindiariol);
-            Lindiarioinsertl."Journal Batch Name" := ConfContabilidad."Sección retenciones";
-            Lindiarioinsertl."Line No." := Numlineal;
-            Lindiarioinsertl.INSERT(TRUE);
-            Numlineal += 10000;
-            Lindiarioinsertl.VALIDATE(Amount, Imporotrosl);
-            Lindiarioinsertl."Document No." := Numdocumentov;
-            Lindiarioinsertl.Description := STRSUBSTNO(Text002l);
-            //4 DIM
-            Lindiarioinsertl.VALIDATE("Shortcut Dimension 1 Code", Lindiariol."Shortcut Dimension 1 Code");
-            Lindiarioinsertl.VALIDATE("Shortcut Dimension 2 Code", Lindiariol."Shortcut Dimension 2 Code");
-            //4 DIM
-            //-001
-            Lindiarioinsertl."Exported to Payment File" := false;
-            Lindiarioinsertl.MODIFY(FALSE);
-            //Lindiarioinsertl.MODIFY(TRUE);
-            //+001
-        END;
-        Lindiariol.SETRANGE("Mov. retención");
-        Lindiariol.SETRANGE("Mov. retención", 0);
-        IF Lindiariol.FIND('-') THEN BEGIN
-            REPEAT
-                Imporotrosliql += Lindiariol.Amount;
-            UNTIL Lindiariol.NEXT = 0;
-            Lindiarioinsertl.INIT;
-            Lindiarioinsertl.COPY(Lindiariol);
-            Lindiarioinsertl."Journal Batch Name" := ConfContabilidad."Sección retenciones";
-            Lindiarioinsertl."Line No." := Numlineal;
-            Lindiarioinsertl.INSERT(TRUE);
-            Numlineal += 10000;
-            Lindiarioinsertl.VALIDATE(Amount, Imporotrosliql);
-            Lindiarioinsertl."Document No." := Numdocumentov;
-            Lindiarioinsertl.Description := STRSUBSTNO(Text002l);
-            //4 DIM
-            Lindiarioinsertl.VALIDATE("Shortcut Dimension 1 Code", Lindiariol."Shortcut Dimension 1 Code");
-            Lindiarioinsertl.VALIDATE("Shortcut Dimension 2 Code", Lindiariol."Shortcut Dimension 2 Code");
-            //4 DIM
-            //-001
-            Lindiarioinsertl."Exported to Payment File" := false;
-            Lindiarioinsertl.MODIFY(FALSE);
-            //Lindiarioinsertl.MODIFY(TRUE);
-            //+001
-        END;
-        Lindiariol.RESET;
-        Lindiariol.SETRANGE("Journal Template Name", ConfContabilidad."Libro retenciones");
-        Lindiariol.SETRANGE("Journal Batch Name", ConfContabilidad."Sección auxiliar retenciones");
-        IF Lindiariol.FINDFIRST THEN Lindiariol.DELETEALL(TRUE);
-    END;
+//     procedure Realizaragrupacionporpais();
+//     VAR
+//         Companyinfol: Record 79;
+//         Lindiariol: Record 81;
+//         Imporespañal: Decimal;
+//         Imporespañaliql: Decimal;
+//         Imporotrosl: Decimal;
+//         Imporotrosliql: Decimal;
+//         Lindiarioinsertl: Record 81;
+//         Liqretencionl: Record "EXC Aux. liq mov. retención";
+//         Numlineal: Integer;
+//         Text001l: Label 'Liquidación retención %1';
+//         Text002l: Label 'Liquidación retención países extranjeros.';
+//     begin
+//         clear(Liqretencionl);
+//         Liqretencionl.Reset();
+//         Liqretencionl.Setrange("User Id.", USERID);
+//         Liqretencionl.DeleteAll();
+//         Imporespañal := 0;
+//         Imporespañaliql := 0;
+//         Imporotrosl := 0;
+//         Imporotrosliql := 0;
+//         Numlineal := 10000;
+//         Companyinfol.Get();
+//         Lindiariol.Reset();
+//         Lindiariol.Setrange("Journal Template Name", ConfContabilidad."Retention Journal Template");
+//         Lindiariol.Setrange("Journal Batch Name", ConfContabilidad."Retention Aux. Batch");
+//         Lindiariol.Setrange("Country/Region Code", Companyinfol."Country/Region Code");
+//         Lindiariol.SETFILTER("Retention Entry", '<>%1', 0);
+//         if Lindiariol.Find('-') then begin
+//             repeat
+//                 Imporespañal += Lindiariol.Amount;
+//                 Liqretencionl."Journal Template Name" := ConfContabilidad."Retention Journal Template";
+//                 Liqretencionl."Journal Batch Name" := ConfContabilidad."Retention Batch";
+//                 Liqretencionl."Line No." := Numlineal;
+//                 Liqretencionl."Deduction Entry" := Lindiariol."Retention Entry";
+//                 Liqretencionl."Amount to Apply" := Lindiariol.Amount;
+//                 Liqretencionl."Document No." := Lindiariol."Document No.";
+//                 Liqretencionl."User Id." := USERID;
+//                 if Liqretencionl.Insert() then;
+//             until Lindiariol.Next() = 0;
+//             Lindiarioinsertl.INIT();
+//             Lindiarioinsertl.COPY(Lindiariol);
+//             Lindiarioinsertl."Journal Batch Name" := ConfContabilidad."Retention Batch";
+//             Lindiarioinsertl."Line No." := Numlineal;
+//             Lindiarioinsertl.Insert(true);
+//             Numlineal += 10000;
+//             Lindiarioinsertl.Validate(Amount, Imporespañal);
+//             Lindiarioinsertl."Document No." := Numdocumentov;
+//             Lindiarioinsertl.Description := STRSUBSTNO(Text001l, Lindiarioinsertl."Country/Region Code");
+//             //-001
+//             Lindiarioinsertl."Exported to Payment File" := false;
+//             Lindiarioinsertl.Modify(false);
+//             //Lindiarioinsertl.Modify(true);
+//             //+001
+//         end;
+//         Lindiariol.Setrange("Retention Entry");
+//         Lindiariol.Setrange("Retention Entry", 0);
+//         if Lindiariol.Find('-') then begin
+//             repeat
+//                 Imporespañaliql += Lindiariol.Amount;
+//             until Lindiariol.Next() = 0;
+//             Lindiarioinsertl.INIT();
+//             Lindiarioinsertl.COPY(Lindiariol);
+//             Lindiarioinsertl."Journal Batch Name" := ConfContabilidad."Retention Batch";
+//             Lindiarioinsertl."Line No." := Numlineal;
+//             Lindiarioinsertl.Insert(true);
+//             Numlineal += 10000;
+//             Lindiarioinsertl.Validate(Amount, Imporespañaliql);
+//             Lindiarioinsertl."Document No." := Numdocumentov;
+//             Lindiarioinsertl.Description := STRSUBSTNO(Text001l, Lindiarioinsertl."Country/Region Code");
+//             //4 DIM
+//             Lindiarioinsertl.Validate("Shortcut Dimension 1 Code", Lindiariol."Shortcut Dimension 1 Code");
+//             Lindiarioinsertl.Validate("Shortcut Dimension 2 Code", Lindiariol."Shortcut Dimension 2 Code");
+//             //4 DIM
+//             //-001
+//             Lindiarioinsertl."Exported to Payment File" := false;
+//             Lindiarioinsertl.Modify(false);
+//             //Lindiarioinsertl.Modify(true);
+//             //+001
+//         end;
+//         Lindiariol.Setrange("Country/Region Code");
+//         Lindiariol.SETFILTER("Country/Region Code", '<>%1', Companyinfol."Country/Region Code");
+//         Lindiariol.Setrange("Retention Entry");
+//         Lindiariol.SETFILTER("Retention Entry", '<>%1', 0);
+//         if Lindiariol.Find('-') then begin
+//             repeat
+//                 Liqretencionl."Journal Template Name" := ConfContabilidad."Retention Journal Template";
+//                 Liqretencionl."Journal Batch Name" := ConfContabilidad."Retention Batch";
+//                 Liqretencionl."Line No." := Numlineal;
+//                 Liqretencionl."Deduction Entry" := Lindiariol."Retention Entry";
+//                 Liqretencionl."Amount to Apply" := Lindiariol.Amount;
+//                 Liqretencionl."Document No." := Lindiariol."Document No.";
+//                 Liqretencionl."User Id." := USERID;
+//                 if Liqretencionl.Insert() then;
+//                 Imporotrosl += Lindiariol.Amount;
+//             until Lindiariol.Next() = 0;
+//             Lindiarioinsertl.INIT();
+//             Lindiarioinsertl.COPY(Lindiariol);
+//             Lindiarioinsertl."Journal Batch Name" := ConfContabilidad."Retention Batch";
+//             Lindiarioinsertl."Line No." := Numlineal;
+//             Lindiarioinsertl.Insert(true);
+//             Numlineal += 10000;
+//             Lindiarioinsertl.Validate(Amount, Imporotrosl);
+//             Lindiarioinsertl."Document No." := Numdocumentov;
+//             Lindiarioinsertl.Description := STRSUBSTNO(Text002l);
+//             //4 DIM
+//             Lindiarioinsertl.Validate("Shortcut Dimension 1 Code", Lindiariol."Shortcut Dimension 1 Code");
+//             Lindiarioinsertl.Validate("Shortcut Dimension 2 Code", Lindiariol."Shortcut Dimension 2 Code");
+//             //4 DIM
+//             //-001
+//             Lindiarioinsertl."Exported to Payment File" := false;
+//             Lindiarioinsertl.Modify(false);
+//             //Lindiarioinsertl.Modify(true);
+//             //+001
+//         end;
+//         Lindiariol.Setrange("Retention Entry");
+//         Lindiariol.Setrange("Retention Entry", 0);
+//         if Lindiariol.Find('-') then begin
+//             repeat
+//                 Imporotrosliql += Lindiariol.Amount;
+//             until Lindiariol.Next() = 0;
+//             Lindiarioinsertl.INIT();
+//             Lindiarioinsertl.COPY(Lindiariol);
+//             Lindiarioinsertl."Journal Batch Name" := ConfContabilidad."Retention Batch";
+//             Lindiarioinsertl."Line No." := Numlineal;
+//             Lindiarioinsertl.Insert(true);
+//             Numlineal += 10000;
+//             Lindiarioinsertl.Validate(Amount, Imporotrosliql);
+//             Lindiarioinsertl."Document No." := Numdocumentov;
+//             Lindiarioinsertl.Description := STRSUBSTNO(Text002l);
+//             //4 DIM
+//             Lindiarioinsertl.Validate("Shortcut Dimension 1 Code", Lindiariol."Shortcut Dimension 1 Code");
+//             Lindiarioinsertl.Validate("Shortcut Dimension 2 Code", Lindiariol."Shortcut Dimension 2 Code");
+//             //4 DIM
+//             //-001
+//             Lindiarioinsertl."Exported to Payment File" := false;
+//             Lindiarioinsertl.Modify(false);
+//             //Lindiarioinsertl.Modify(true);
+//             //+001
+//         end;
+//         Lindiariol.Reset();
+//         Lindiariol.Setrange("Journal Template Name", ConfContabilidad."Retention Journal Template");
+//         Lindiariol.Setrange("Journal Batch Name", ConfContabilidad."Retention Aux. Batch");
+//         if Lindiariol.FindFIRST() then Lindiariol.DeleteAll(true);
+//     end;
 
-    PROCEDURE MostrarDiario(boolMuestra: Boolean);
-    BEGIN
-        NoMuestraDiario := boolMuestra;
-    END;
-}
+//     procedure MostrarDiario(boolMuestra: Boolean);
+//     begin
+//         NoMuestraDiario := boolMuestra;
+//     end;
+// }

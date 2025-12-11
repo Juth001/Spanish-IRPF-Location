@@ -1,7 +1,7 @@
 namespace Excelia.IRPF;
 using Microsoft.Sales.History;
 
-tableextension 86320 "Sales Shipment Header_IRPF" extends "Sales Shipment Header"
+tableextension 86314 "Sales Cr.Memo Header" extends "Sales Cr.Memo Header"
 {
     fields
     {
